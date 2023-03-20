@@ -240,7 +240,7 @@ img{
     }
 }
 /* メイン */
-.main__title{
+.title_en,.title_ja{
     width:80%;
     margin:0 auto;
 }
@@ -374,7 +374,7 @@ img{
     text-align: center;
 }
 @media (min-width:960px){
-    .main__title{
+    .title_ja{
         margin-bottom:160px;
     }
     .footer__shapes{
