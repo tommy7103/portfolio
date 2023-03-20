@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="中富春香のポートフォリオサイトです。">
+    <title>Nakatomi Haruka portfolio site</title>
+    <!-- ソーシャルメディア用 -->
+    <meta property="og:title" content="Nakatomi Haruka portfolio site">
+    <meta property="og:description" content="中富春香のポートフォリオサイトです。">
+    <meta property="og:image" content="image.jpg">
+    <meta property="og:image:alt" content="中富春香のポートフォリオサイトです。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nakatomiharuka.com/portfolio/">
+    <meta name="twitter:card" content="中富春香のポートフォリオサイトです。">
+    <!-- ファビコン -->
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/lottie.min.js"></script>
+<body id="body">
+    <div id="loading_wrapper">
+        <div id="loading"></div>
+    </div>
+    <header id="header">
+        <div class="ham_menu">
+            <input type="checkbox" id="ham_open" class="hidden">
+            <label for="ham_open" class="ham_icon"><span class="ham_text ham_open">open</span></label>
+            <div class="ham_nav">
+                <label for="ham_open" class="ham_icon"><span class="ham_text ham_close">close</span></label>
+                <div class="header_title nav_title">
+                    <p class="title">Nakatomi Haruka</p>
+                    <p class="title_sub">portfolio site</p>
+                </div>
+                <ul class="header_navigation">
+                    <li class="header_nav"><a href="#main" class="nav_list font_ja">トップ</a></li>
+                    <li class="header_nav"><a href="about.html" class="nav_list font_ja">自身のこと</a></li>
+                    <li class="header_nav"><a href="#main__works" class="nav_list font_ja">作品</a></li>
+                    <li class="header_nav"><a href="column.html" class="nav_list font_ja">コラム</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_title">
+            <p class="title">Nakatomi Haruka</p>
+            <p class="title_sub">portfolio site</p>
+        </div>
+    </header>
+    <main id="main">
+        <div id="main__visual" class="main__visual">
+            <div class="main__visual_time" id="js-clock">
+                <div class="time_clock_wrap">
+                    <div class="time_clock">
+                        <div id="second-hand"></div>
+                        <div id="minute-hand"></div>
+                        <div id="hour-hand"></div>
+                    </div>
+                </div>
+                <div id="time_date">
+                    <p id="time_today_date"></p>
+                    <p id="time_today_time"></p>
+                </div>
+            </div>
+            <div class="main__visual_anime" id="js-circle">
+                <div class="circle circle0"></div>
+                <div class="circle circle1"></div>
+            </div>
+        </div>
+        <div id="main__aboutme" class="main__aboutme">
+            <div class="main__title">
+                <h1 class="title_en">About me</h1>
+                <p class="title_ja">自身のこと.</p>
+            </div>
+            <div class="aboutme_profile">
+                <div class="aboutme_image_mobile"><img class="lazyload" data-src="img/about_profile_mobile.jpg" alt="プロフィール"></div>            
+                <div class="aboutme_image"><img class="lazyload" data-src="img/aboutme_profile.jpg" alt="プロフィール"></div>
+                <div class="aboutme_intro">
+                    <div class="intro_flex">
+                        <div class="aboutme_deco"></div>
+                        <div class="aboutme_text_wrap fadeUpTrigger">
+                            <p class="aboutme_text">デザインで、誰かの伝えたい「思い」をカタチにする。何歳になっても、挑戦をし続ける人でありたい。</p>
+                            <p class="aboutme_text">まじめで好奇心旺盛、人を喜ばせることが好きな性格です。</p>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutme_service_wrap">
+                <div class="aboutme_service">
+                    <div class="service_flex">
+                        <div class="aboutme_item">
+                            <h1 class="service_title"><span class="title-first">デ</span>ィレクション</h1>
+                            <div class="service_shape">
+                                <div class="shape-balloon"></div>
+                            </div>
+                            <p class="service_text">制作の中で一番重要な段階です。お客様がイメージするものをうまく具現化できるよう、またその目的を明確にするために細かな点までヒアリングを行います。ヒアリングをもとに、サイトのデザイン・構成の根拠となるコンセプトを決めます。</p>
+                        </div>
+                        <div class="aboutme_item">
+                            <h1 class="service_title"><span class="title-first">デ</span>ザイン</h1>
+                            <div class="service_shape">
+                                <div class="shape-squares">
+                                    <span class="square square1"></span>
+                                    <span class="square square2"></span>
+                                    <span class="square square3"></span>
+                                    <span class="square square4"></span>
+                                </div>
+                            </div>
+                            <p class="service_text">ディレクションで決定したコンセプトをもとに、お客様がイメージするものかたちにしていきます。Web制作だけでなく、名刺の印刷やロゴの制作なども行います。</p>
+                        </div>
+                    </div>
+                    <div class="service_flex">
+                        <div class="aboutme_item">
+                            <h1 class="service_title"><span class="title-first">コ</span>ーディング</h1>
+                            <div class="service_shape">
+                                <div class="shape-coding">
+                                    <span class="shape-tag less"></span>
+                                    <span class="shape-slash"></span>
+                                    <span class="shape-tag greater"></span>
+                                </div>
+                            </div>
+                            <p class="service_text">どのデバイスでもストレスなく見ることができるようレスポンシブ対応で制作します。Wordpressを使用した更新性のあるサイト、CSSアニメーションやJavascriptを使用した動きのあるサイトを制作します。</p>
+                        </div>
+                        <div class="aboutme_item">
+                            <h1 class="service_title service_title-small">coming soon!</h1>
+                            <div class="service_shape">
+                                <div class="shape-roundplus"></div>
+                            </div>
+                            <p class="service_text">より多くの人に、デザインの力で喜んでもらいたいと考えています。日々勉強、もっともっと成長し自分のできることを増やしていきます。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__button"><a href="about.html" class="button font_en-regular">my profile</a></div>    
+            </div>
+        </div>
+        <div id="main__works" class="main__works">
+            <div class="main__title title_works">
+                <h1 class="title_en">Works</h1>
+                <p class="title_ja">作品.</p>
+            </div>
+            <div id="works_slider" class="works_slider_wrapper">
+                <div class="works_slider" id="js-works">
+                    <div class="works_items">
+                        <div class="works_item item01 js-works_items" data-target="modal01">
+                            <p class="works_category">Webサイト</p>
+                            <p class="works_title">コーポレートサイト</p>
+                        </div>
+                    </div>
+                    <div class="works_items">
+                        <div class="works_item item02 js-works_items" data-target="modal02">
+                            <p class="works_category">Webサイト</p>
+                            <p class="works_title">模写コーディング</p>
+                        </div>
+                    </div>
+                    <div class="works_items">
+                        <div class="works_item item03 js-works_items" data-target="modal03">
+                            <p class="works_category">Webサイト</p>
+                            <p class="works_title">LPサイト</p>
+                        </div>
+                    </div>
+                    <div class="works_items">
+                        <div class="works_item item04 js-works_items" data-target="modal04">
+                            <p class="works_category">グラフィック</p>
+                            <p class="works_title">名刺</p>
+                        </div>
+                    </div>
+                    <div class="works_items">
+                        <div class="works_item item05 js-works_items" data-target="modal05">
+                            <p class="works_category">グラフィック</p>
+                            <p class="works_title">バナー</p>
+                        </div>
+                    </div>
+                    <div class="works_items">
+                        <div class="works_item item06 js-works_items" data-target="modal06">
+                            <p class="works_category">グラフィック</p>
+                            <p class="works_title">名刺</p>
+                        </div>
+                    </div>
+                    <div class="works_items">
+                        <div class="works_item item07 js-works_items" data-target="modal07">
+                            <p class="works_category">Webサイト</p>
+                            <p class="works_title">ポートフォリオサイト</p>
+                        </div>
+                    </div>
+                    <div class="works_items">
+                        <div class="works_item item_comingsoon">
+                            <p class="works_title title_comingsoon font_en-bold">coming soon!</p>
+                            <span class="works_item_icon"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-horizon" id="js-scroll"><span class="scroll-text">Scroll</span></div>
+            </div>
+            <div class="works_modal" id="js-works_content">
+                <div id="modal01" class="modal_contents">
+                    <div class="modal_contents_wrap">
+                        <div class="button_close"><span class="close_icon"></span></div>
+                        <div class="contents_wrap">
+                            <div class="flex_item_row">
+                                <div class="contents_intro">
+                                    <div class="title_category">
+                                        <p class="contents_category">Webサイト</p>
+                                        <p class="contents_title">コーポレートサイト</p>
+                                    </div>
+                                    <div class="contents_url"><a href="https://nakatomiharuka.com/dixans/" class="site_link" target="_blank" rel="noopener noreferrer"><span class="site_link_icon"></span>WEB SITE</a></div>
+                                </div>
+                                <div class="contents_flex">
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">概要</p>
+                                        <p class="contents_text">東京都千代田区に３店舗展開する飲食店『パティスリー アンド カフェ DIXANS(ディゾン)』さんのサイト制作を担当させていただきました。</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">サイトコンセプト</p>
+                                        <p class="contents_text">皆様の日常に寄り添い、特別な日に彩りを添える街のコーヒー屋さん兼ケーキ屋さん</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">デザインコンセプト</p>
+                                        <p class="contents_text">暗めで落ち着いた店内を再現する高級感のあるサイト。ゴールドの店名ロゴや商品の写真が映えるよう、色使いはシンプルに。</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">制作ポイント</p>
+                                        <p class="contents_text">CSSアニメーションやJavascriptのライブラリなどを使用して、全体的に動きのあるサイトにしました。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents_images">
+                                <div class="contents_image image01"><img class="lazyload" data-src="img/mockup_corporate_detail.jpg" alt="モックアップ"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal02" class="modal_contents">
+                    <div class="modal_contents_wrap">
+                        <div class="button_close"><span class="close_icon"></span></div>
+                        <div class="contents_wrap">
+                            <div class="flex_item_row">
+                                <div class="contents_intro">
+                                    <div class="title_category">
+                                        <p class="contents_category">Webサイト</p>
+                                        <p class="contents_title">模写コーディング</p>
+                                    </div>
+                                    <div class="contents_url"><a href="https://nakatomiharuka.com/coding_reproduction/" class="site_link" target="_blank" rel="noopener noreferrer"><span class="site_link_icon"></span>WEB SITE</a></div>
+                                </div>
+                                <div class="contents_flex">
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">概要</p>
+                                        <p class="contents_text">作って学ぶコーディング学習サイト「Codestep」の練習コーディングを行いました。</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">サイトコンセプト</p>
+                                        <p class="contents_text">スニーカー専門のニュースメディアの架空サイトです。</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">デザインコンセプト</p>
+                                        <p class="contents_text">省略</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">制作ポイント</p>
+                                        <p class="contents_text">動画の埋め込み、カルーセルスライダー、グリッドレイアウトを用いたコーディングを行いました。またJqueryは使わず、素のjavascriptで実装しました。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents_images">
+                                <div class="contents_image image01"><img class="lazyload" data-src="img/mockup_reproduction_detail.jpg" alt="モックアップ"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal03" class="modal_contents">
+                    <div class="modal_contents_wrap">
+                        <div class="contents_wrap">
+                            <div class="button_close"><span class="close_icon"></span></div>
+                            <div class="flex_item_row">
+                                <div class="contents_intro">
+                                    <div class="title_category">
+                                        <p class="contents_category">Webサイト</p>
+                                        <p class="contents_title">LPサイト</p>
+                                    </div>
+                                    <div class="contents_url"><a href="https://nakatomiharuka.com/sugutabe/" class="site_link" target="_blank" rel="noopener noreferrer"><span class="site_link_icon"></span>WEB SITE</a></div>
+                                </div>
+                                <div class="contents_flex">
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">概要</p>
+                                        <p class="contents_text">架空のオーガニック野菜宅配サービス「スグ食べ」のLPサイトです。ワイヤーフレームからコーディングまで制作しました。</p>
+                                    </div>
+                                    <div class="flex_item_row">
+                                        <div class="contents_flex_item">
+                                            <p class="contents_point">サイトコンセプト</p>
+                                            <p class="contents_text">新鮮さ・信頼感・安心感・健やかさ・ヘルシー</p>
+                                        </div>
+                                        <div class="contents_flex_item">
+                                            <p class="contents_point">デザインコンセプト</p>
+                                            <p class="contents_text">ナチュラルで明るく、清潔感がある感じ。お試しセットのボタンが目立つようにしてほしい。ターゲットユーザーはスマホもよくみるので、スマホでも使いやすくしたい。</p>
+                                        </div>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">制作ポイント</p>
+                                        <p class="contents_text">LPサイトなので、ある程度リッチなデザイン（ディティールに凝ったもの）を意識しつつ、ターゲットである30代〜40代の主婦に向けてベージュをメインとした柔らかな印象があるサイトにデザインしました。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents_images">
+                                <div class="contents_image image01"><img class="lazyload" data-src="img/mockup_lp_detail.jpg" alt="モックアップ"></div>                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal04" class="modal_contents">
+                    <div class="modal_contents_wrap">
+                        <div class="contents_wrap">
+                            <div class="button_close"><span class="close_icon"></span></div>
+                            <div class="flex_item_row">
+                                <div class="contents_intro">
+                                    <div class="title_category">
+                                        <p class="contents_category">グラフィック</p>
+                                        <p class="contents_title">名刺</p>
+                                    </div>
+                                </div>
+                                <div class="contents_flex">
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">概要</p>
+                                        <p class="contents_text">日本の伝統工芸であるつまみ細工を個人で販売している方の名刺を制作させていただきました。</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">デザインコンセプト</p>
+                                        <p class="contents_text">和風にとらわれすぎない・上品さ・可愛らしさ</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">制作ポイント</p>
+                                        <p class="contents_text">伝統工芸というと堅苦しくあまり興味を引かれにくい印象を受けたので、柔らかい上品さの中に少し可愛らしさも取り入れたデザインにしました。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents_images">
+                                <div class="contents_image image01"><img class="lazyload" data-src="img/mockup_namecard02_detail.jpg" alt="モックアップ"></div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal05" class="modal_contents">
+                    <div class="modal_contents_wrap">   
+                        <div class="contents_wrap">
+                            <div class="button_close"><span class="close_icon"></span></div>
+                            <div class="flex_item_row">
+                                <div class="contents_intro">
+                                    <div class="title_category">
+                                        <p class="contents_category">グラフィック</p>
+                                        <p class="contents_title">バナー</p>
+                                    </div>
+                                </div>
+                                <div class="contents_flex">
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">概要</p>
+                                        <p class="contents_text">架空のカフェのバナーを制作しました。オフィスビルの地下にある、ニューヨークをイメージした内装が特徴的なカフェです。</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">デザインコンセプト</p>
+                                        <p class="contents_text">シンプル・落ち着いた・モダン</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">制作ポイント</p>
+                                        <p class="contents_text">WiFiとコンセントの完備を表記することで作業がしやすい環境であることをアピールしました。暗い色味や影を使うことで、落ち着いて集中できる印象を表現しています。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents_images">
+                                <div class="contents_image image01"><img class="lazyload" data-src="img/mockup_banner_detail.jpg" alt="モックアップ"></div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal06" class="modal_contents">
+                    <div class="modal_contents_wrap">
+                        <div class="contents_wrap">
+                            <div class="button_close"><span class="close_icon"></span></div>
+                            <div class="flex_item_row">
+                                <div class="contents_intro">
+                                    <div class="title_category">
+                                        <p class="contents_category">グラフィック</p>
+                                        <p class="contents_title">名刺</p>
+                                    </div>
+                                </div>
+                                <div class="contents_flex">
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">概要</p>
+                                        <p class="contents_text">鎌倉でネイリストをしている友人の名刺を制作しました。</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">デザインコンセプト</p>
+                                        <p class="contents_text">クール・不気味・パキッとした</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">制作ポイント</p>
+                                        <p class="contents_text">人と被らないような名刺という要望をいただいたので、個性的なデザインを考えました。色を多用している分、片面は氏名と連絡先のみで見やすくしました。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents_images">
+                                <div class="contents_image image01"><img class="lazyload" data-src="img/mockup_namecard01_detail.jpg" alt="モックアップ"></div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal07" class="modal_contents">
+                    <div class="modal_contents_wrap">   
+                        <div class="contents_wrap">
+                            <div class="button_close"><span class="close_icon"></span></div>
+                            <div class="flex_item_row">
+                                <div class="contents_intro">
+                                    <div class="title_category">
+                                        <p class="contents_category">Webサイト</p>
+                                        <p class="contents_title">ポートフォリオサイト</p>
+                                    </div>
+                                    <div class="contents_url"><a href="index.html" class="site_link"><span class="site_link_icon"></span>WEB SITE</a></div>
+                                </div>
+                                <div class="contents_flex">
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">概要</p>
+                                        <p class="contents_text">自身のポートフォリオサイトを制作しました。</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">デザインコンセプト</p>
+                                        <p class="contents_text">見やすさ重視・まっさらな・純粋さ</p>
+                                    </div>
+                                    <div class="contents_flex_item">
+                                        <p class="contents_point">制作ポイント</p>
+                                        <p class="contents_text">これから成長していくまっさらな自分という意味を込めて、色はホワイトベースでシンプルなデザインを考えました。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents_images">
+                                <div class="contents_image image01"><img class="lazyload" data-src="img/mockup_portfolio_detail.jpg" alt="モックアップ"></div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="footer__shapes">
+            <span class="footer__shape shape1"></span>
+            <span class="footer__shape shape2"></span>
+        </div>
+        <div class="footer__wrap">
+            <ul class="footer__nav">
+                <li class="nav_item"><a href="#main" class="nav_item_text">トップ</a></li>
+                <li class="nav_item"><a href="about.html" class="nav_item_text">自身のこと</a></li>
+                <li class="nav_item"><a href="#main__works" class="nav_item_text">作品</a></li>
+                <li class="nav_item"><a href="column.html" class="nav_item_text">コラム</a></li>
+            </ul>
+            <div class="copyright">copyright 2023 Nakatomi Haruka portfolio site</div>
+        </div>
+    </footer>
+    <script src="js/lazyload.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        lazyload();
+    </script>
+</body>
+</html>
