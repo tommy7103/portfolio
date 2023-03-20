@@ -730,11 +730,17 @@
     margin-bottom: 64px;
 }
 .site_link{
+    margin-right:16px;
     font-family: 'Nunito';
     font-weight: bold;
     color:#6f8086;
     text-decoration: none;
     font-size: calc(12px + 2 * (100vw - 390px) / 890);
+}
+.site_link img{
+    width:16px;
+    height:16px;
+    margin-right: 8px;
 }
 .site_link_icon{
     display: inline-block;
