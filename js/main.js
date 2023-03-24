@@ -21,6 +21,7 @@ function fadeOut(node,duration,value01,value02){
         },duration);
     };
 };
+// ロードアニメ
 window.addEventListener("load",function(){
     const anim = lottie.loadAnimation({
         container: document.getElementById('loading'),

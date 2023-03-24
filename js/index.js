@@ -59,53 +59,49 @@ function mainVisualCircleAnime(){
 };
 mainVisualCircleAnime();
 (function(){
-    const $works = document.getElementById("js-works");
-    const $worksItems = $works.querySelectorAll(".js-works_items");
-    for(let i = 0;i < $worksItems.length; i++){
-        $worksItems[i].addEventListener("click",function(){
+    const $worksItems = document.querySelectorAll(".js-works_items");
+    const $header = document.getElementById("header");
+    const $body = document.getElementsByTagName("body")[0];
+    for(let i= 0; i < $worksItems.length; i++){
+        $worksItems[i].addEventListener("click", function(){
             const target = this.dataset.target;
             const modal = document.getElementById(target);
-            const modalHeight = modal.clientHeight;
-            const $header = document.getElementsByTagName("header")[0];
-            const scrollPosition = window.scrollY;
-            const $body = document.getElementsByTagName("body")[0];
-            const button = modal.querySelector(".button_close");
+            const closeBtn = document.querySelectorAll(".button_close");
+            $header.style.visibility = "hidden";
+            fadeIn(modal, 300, 0, 1);
             $body.classList.add("fixed");
-            $body.style.top =`-${scrollPosition}px`;
-            $header.style.display = "none";
-            modal.style.display = "block";
-            modal.animate([{opacity:0},{opacity:1}],300);
-            button.addEventListener("click",function(){
-                modal.style.display = "none";
-                modal.animate([{opacity:1},{opacity:0}],300);
-                $header.style.display = "block";
-                $body.classList.remove("fixed");
-                window.scrollTo(0,scrollPosition);
-            })
+
+            for(let d= 0; d < closeBtn.length; d++){
+                closeBtn[d].addEventListener("click", function(e){
+                    e.preventDefault();
+                    fadeOut(modal, 300, 1, 0);
+                    $header.style.visibility = "visible";
+                    $body.classList.remove("fixed");
+                })
+            }
         })
     }
 })();
-
 (function(){
     var flag = false;
     window.addEventListener("scroll",function(){
         const scroll = window.scrollY;
-        const $content = document.getElementById("works_slider");
-        const clientRect = $content.getBoundingClientRect();
-        const contentClientRect = scroll + clientRect.top - 120;
-        const contentHeight = $content.clientHeight;
-        const contentBottom = contentClientRect + contentHeight;
+        const scrollBottom = window.innerHeight + scroll;
+        const content = document.getElementById("works_slider");
+        const contentPositionY = content.getBoundingClientRect().top + scroll - 200;
+        const contentBottom = content.clientHeight + contentPositionY;
         const $scrollHorizon = document.getElementById("js-scroll");
-        if(contentBottom >= scroll && scroll >= contentClientRect){
+        if(contentBottom >= scroll && scroll >= contentPositionY){
             if(!flag){
                 flag = true;
-                fadeIn($scrollHorizon,300,0,0.6);
-                setTimeout(function(){
-                    fadeOut($scrollHorizon,300,0.6,0);
-                },2000);
+                fadeIn($scrollHorizon, 300, 0, 1);
+                setTimeout(() => {
+                    fadeOut($scrollHorizon, 300, 1, 0);
+                }, 4000);
             }
         }else{
-            $scrollHorizon.style.display="none";
+            flag = false;
+            fadeOut($scrollHorizon, 300, 1, 0);
         }
-    })
+    });
 })();
