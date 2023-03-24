@@ -33,6 +33,7 @@ window.addEventListener("load",function(){
     const $mainVisualTime = document.getElementById("js-clock");
     setTimeout(function(){
         fadeIn($mainVisualTime,500,0,1);
+        $mainVisualTime.style.display="inline-block";
     },2400);
 });
 function mainVisualCircleAnime(){
@@ -57,7 +58,6 @@ function mainVisualCircleAnime(){
     $circle.appendChild(fragment);
 };
 mainVisualCircleAnime();
-setInterval(mainVisualCircleAnime,10000);
 (function(){
     const $works = document.getElementById("js-works");
     const $worksItems = $works.querySelectorAll(".js-works_items");
@@ -65,18 +65,20 @@ setInterval(mainVisualCircleAnime,10000);
         $worksItems[i].addEventListener("click",function(){
             const target = this.dataset.target;
             const modal = document.getElementById(target);
-            document.getElementById("header").style.display = "none";
+            const modalHeight = modal.clientHeight;
+            const $header = document.getElementsByTagName("header")[0];
+            const scrollPosition = window.scrollY;
+            const $body = document.getElementsByTagName("body")[0];
+            const button = modal.querySelector(".button_close");
+            $body.classList.add("fixed");
+            $body.style.top =`-${scrollPosition}px`;
+            $header.style.display = "none";
             modal.style.display = "block";
             modal.animate([{opacity:0},{opacity:1}],300);
-            const scrollPosition = window.scrollY;
-            const $body = document.getElementById("body");
-            $body.classList.add("fixed");
-            $body.style.top ="-" + scrollPosition + "px";
-            const button = modal.querySelector(".button_close");
             button.addEventListener("click",function(){
                 modal.style.display = "none";
                 modal.animate([{opacity:1},{opacity:0}],300);
-                document.getElementById("header").style.display = "block";
+                $header.style.display = "block";
                 $body.classList.remove("fixed");
                 window.scrollTo(0,scrollPosition);
             })

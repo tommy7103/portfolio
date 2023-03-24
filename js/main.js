@@ -1,3 +1,10 @@
+// ブラウザ内の画面高さを取得
+function setHeight() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setHeight();
+window.addEventListener('resize', setHeight);
 // フェードイン関数
 function fadeIn(node,duration,value01,value02){
     if(node.style.display = "none"){
@@ -25,24 +32,24 @@ window.addEventListener("load",function(){
     const $loadingWrapper = document.getElementById("loading_wrapper");
     const $header = document.getElementById("header");
     let path = location.pathname;
-    console.log(path);
     setTimeout(function(){
         fadeOut($loadingWrapper,300,1,0);
     },1800);
     setTimeout(function(){
         fadeIn($header,500,0,1);
+        $header.style.display="flex";
     },3000);
 })
 window.addEventListener("scroll",function(){
     const windowScroll = window.scrollY;
     const windowHeight = window.innerHeight;
     function fadeAnime(){
-        const fadeUp = document.querySelectorAll(".fadeUpTrigger");
+        const fadeUp = document.querySelectorAll(".fade-up-trigger");
         for(let i = 0; i < fadeUp.length; i++){
             const fadeUpContent = fadeUp[i];
             const fadeUpContents = fadeUpContent.getBoundingClientRect();
             const contentsHeight = fadeUpContents.top + windowScroll + 120;
-            const fadeUpClass = "fadeUp";
+            const fadeUpClass = "fade-up";
             if(windowScroll >= contentsHeight - windowHeight){
                 fadeUpContent.classList.add(fadeUpClass);
             }else{

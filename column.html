@@ -23,26 +23,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Nunito:ital,wght@0,600;0,700;1,800&family=Staatliches&display=swap" rel="stylesheet"></head>
 <body>
-    <div id="loading_wrapper">
-        <div id="loading"></div>
+    <div id="loading_wrapper" class="loading_wrapper">
+        <div id="loading" class="loading"></div>
     </div>
     <header id="header">
-        <div class="ham_menu">
-            <input type="checkbox" id="ham_open" class="hidden">
-            <label for="ham_open" class="ham_icon"><span class="ham_text ham_open">open</span></label>
-            <div class="ham_nav">
-                <label for="ham_open" class="ham_icon"><span class="ham_text ham_close">close</span></label>
-                <div class="header_title nav_title">
-                    <p class="title">Nakatomi Haruka</p>
-                    <p class="title_sub">portfolio site</p>
-                </div>
-                <ul class="header_navigation">
-                    <li class="header_nav"><a href="index.html" class="nav_list">トップ</a></li>
-                    <li class="header_nav"><a href="about.html" class="nav_list">自身のこと</a></li>
-                    <li class="header_nav"><a href="index.html#main__works" class="nav_list">作品</a></li>
-                    <li class="header_nav"><a href="column.html" class="nav_list">コラム</a></li>
-                </ul>
+        <input type="checkbox" id="ham_open" class="hidden">
+        <label for="ham_open" class="ham_icon"><span class="ham_text">open</span></label>
+        <div class="ham_nav">
+            <div class="header_title">
+                <p class="title">Nakatomi Haruka</p>
+                <p class="title_sub">portfolio site</p>
             </div>
+            <ul class="ham_nav_lists">
+                <li><a href="#main">トップ.</a></li>
+                <li><a href="about.html">自身のこと.</a></li>
+                <li><a href="#main__works">作品.</a></li>
+                <li><a href="column.html">コラム.</a></li>
+            </ul>
         </div>
         <div class="header_title">
             <p class="title">Nakatomi Haruka</p>
