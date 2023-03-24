@@ -14,7 +14,7 @@
   src: url("../fonts/Nunito-Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Nunito";
+  font-family: "Nunito-italic";
   font-weight: bolder;
   src: url("../fonts/Nunito-ExtraBoldItalic.ttf") format("truetype");
 }
@@ -355,6 +355,7 @@ footer {
   height: calc(var(--vh, 1vh) * 100);
   padding: 80px 0;
   position: relative;
+  border-radius: 40px 40px 0 0;
   background-color: #fff;
 }
 @media (min-width: 960px) and (min-width: 960px) {

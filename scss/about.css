@@ -1,1 +1,774 @@
-/*# sourceMappingURL=about.css.map */
+@font-face {
+  font-family: "Kiwi Maru";
+  font-weight: normal;
+  src: url("../fonts/KiwiMaru-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Kiwi Maru";
+  font-weight: bold;
+  src: url("../fonts/KiwiMaru-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: bold;
+  src: url("../fonts/Nunito-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito-italic";
+  font-weight: bolder;
+  src: url("../fonts/Nunito-ExtraBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Staatliches";
+  font-weight: bolder;
+  src: url("../fonts/Staatliches-Regular.ttf") format("truetype");
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #F5F5F5;
+  color: #6F8086;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  font-size: 1.4rem;
+  font-family: "Kiwi Maru";
+  font-weight: normal;
+}
+
+.hidden {
+  display: none;
+}
+
+.fixed {
+  overflow: hidden;
+}
+
+.fade-up-trigger {
+  opacity: 0;
+}
+
+.fade-up {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #6F8086;
+}
+
+.loading_wrapper {
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  position: fixed;
+  overflow: hidden;
+  z-index: 9999;
+  background-color: #fff;
+}
+.loading_wrapper .loading {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 960px) {
+  .loading_wrapper .loading {
+    width: 20%;
+  }
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 160px;
+  padding-top: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+  justify-content: space-between;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  header {
+    flex-direction: column;
+    width: 40vw;
+    height: calc(var(--vh, 1vh) * 100);
+    right: 0;
+    left: auto;
+    padding: 80px 24px;
+  }
+}
+header .ham_icon {
+  display: inline-block;
+  position: relative;
+  width: 72px;
+  height: 72px;
+  margin-left: 24px;
+  cursor: pointer;
+  z-index: 99999;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  header .ham_icon {
+    margin-right: 24px;
+    margin-left: auto;
+  }
+}
+header .ham_icon::before, header .ham_icon::after {
+  content: "";
+  width: 48px;
+  height: 3px;
+  background-color: #6F8086;
+  border-radius: 9999px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+header .ham_icon::after {
+  width: 36px;
+  top: 33.3%;
+  left: 12px;
+  transform: translate(0, -33.3%);
+}
+header .ham_icon .ham_text {
+  font-family: "Nunito";
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  top: 66.6%;
+  left: 50%;
+  transform: translate(-50%, -66.6%);
+}
+header .ham_nav {
+  width: 100%;
+  height: 80vh;
+  padding-top: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 40px 40px;
+  background-color: #fff;
+  z-index: 9999;
+  transform: translateY(-100%);
+  transition: all 0.4s ease-in-out;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  header .ham_nav {
+    width: 40vw;
+    height: 90vh;
+    right: 0;
+    left: auto;
+  }
+}
+header .ham_nav .header_title {
+  display: block;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  header .ham_nav .header_title {
+    opacity: 0;
+  }
+}
+header .ham_nav .header_title .title {
+  text-align: right;
+}
+header .ham_nav .ham_nav_lists {
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+}
+header .ham_nav .ham_nav_lists li {
+  margin-bottom: 56px;
+}
+header .ham_nav .ham_nav_lists li a {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+header .header_title {
+  display: inline-block;
+  align-self: flex-end;
+  margin-right: 24px;
+}
+header .header_title .title, header .header_title .title_sub {
+  font-family: "Nunito";
+  font-weight: bold;
+  letter-spacing: 0.16em;
+  font-size: calc(18px + 10 * (100vw - 375px) / 1025);
+}
+header .header_title .title_sub {
+  padding-top: 16px;
+  text-align: right;
+  font-size: calc(16px + 4 * (100vw - 375px) / 1025);
+}
+header #ham_open:checked ~ .ham_nav {
+  transform: translateY(0);
+}
+header #ham_open:checked ~ .ham_icon::after {
+  width: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+header #ham_open:checked ~ .ham_icon::before {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+header #ham_open:checked ~ .ham_icon .ham_text {
+  opacity: 0;
+}
+
+main .title_en, main .title_ja {
+  width: 80%;
+  margin: 0 auto;
+}
+main .title_en {
+  font-family: "Nunito";
+  font-weight: bolder;
+  letter-spacing: 0.15em;
+  color: rgba(245, 245, 245, 0.5019607843);
+  font-size: calc(36px + 20 * (100vw - 375px) / 1025);
+  text-shadow: 1px 1px 2px #f5f5f5,-1px -1px 2px rgb(0, 0, 0,0.3);
+  filter: blur(0.1px);
+  -moz-text-shadow: 1px 1px 2px #f5f5f5,-1px -1px 2px rgb(0, 0, 0,0.3);
+  filter: blur(0.1px);
+  -webkit-text-shadow: 1px 1px 2px #f5f5f5,-1px -1px 2px rgb(0, 0, 0,0.3);
+  filter: blur(0.1px);
+}
+main .title_ja {
+  margin-bottom: 60px;
+  letter-spacing: 0.32em;
+  font-weight: bold;
+  font-size: calc(20px + 4 * (100vw - 375px) / 1025);
+}
+main .main__button {
+  text-align: center;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .main__button {
+    width: 75%;
+  }
+}
+main .main__button .button {
+  display: inline-block;
+  width: 60%;
+  font-family: "Nunito";
+  font-weight: bold;
+  text-decoration: none;
+  color: #6F8086;
+  letter-spacing: 0.16em;
+  line-height: 50px;
+  background-color: #F5F5F5;
+  border-radius: 9999px;
+  font-size: calc(16px + 6 * (100vw - 375px) / 1025);
+  box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.15),-4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0);
+  -moz-box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.15),-4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0);
+  -webkit-box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.15),-4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0);
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .main__button .button {
+    position: relative;
+    width: auto;
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 0;
+    line-height: 72px;
+  }
+}
+main .main__button .button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -100%;
+  width: 72px;
+  height: 72px;
+  background-color: #6F8086;
+  border-radius: 9999px;
+  transition: 0.4s ease-in-out;
+  box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.15),-4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0);
+  -moz-box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.15),-4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0);
+  -webkit-box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.15),-4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0);
+}
+main .main__button .button:hover {
+  color: #F5F5F5;
+  transition: 0.4s ease-in-out;
+}
+main .main__button .button:hover::before {
+  width: 300%;
+}
+
+footer {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  padding: 80px 0;
+  position: relative;
+  border-radius: 40px 40px 0 0;
+  background-color: #fff;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  footer .footer__wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+footer .footer__wrapper ul {
+  width: 80%;
+  margin: 0 auto;
+}
+footer .footer__wrapper ul li {
+  margin-bottom: 32px;
+}
+footer .footer__wrapper ul li a {
+  display: inline-block;
+  padding: 16px 32px;
+  font-size: calc(15px + 1 * (100vw - 375px) / 1025);
+}
+footer .footer__wrapper ul li .nav_about li {
+  margin-bottom: 0;
+}
+footer .footer__wrapper ul li .nav_about li:nth-of-type(3) a {
+  padding-bottom: 0;
+}
+footer .footer__wrapper .footer__image {
+  width: 30%;
+  max-width: 248px;
+  aspect-ratio: 1/1;
+  margin: 0 32px 40px auto;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  footer .footer__wrapper .footer__image {
+    align-self: flex-end;
+  }
+}
+footer .copyright {
+  text-align: center;
+  font-size: calc(12px + 1 * (100vw - 375px) / 1025);
+}
+
+main .aboutme_title {
+  padding-top: 32px;
+  margin-bottom: 80px;
+  font-family: "Nunito-italic";
+  font-weight: bolder;
+  color: rgba(245, 245, 245, 0.5019607843);
+  letter-spacing: 0.15em;
+  text-shadow: 1px 1px 2px #f5f5f5,-1px -1px 2px rgb(0, 0, 0,0.3);
+  filter: blur(0.25px);
+  -moz-text-shadow: 1px 1px 2px #f5f5f5,-1px -1px 2px rgb(0, 0, 0,0.3);
+  filter: blur(0.25px);
+  -webkit-text-shadow: 1px 1px 2px #f5f5f5,-1px -1px 2px rgb(0, 0, 0,0.3);
+  filter: blur(0.25px);
+  font-size: calc(48px + 8 * (100vw - 375px) / 1025);
+}
+main .main__visual {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+main .aboutme_intro {
+  width: 80%;
+  margin: 0 auto;
+}
+main .aboutme_intro .aboutme_intro_wrapper h2 {
+  margin-bottom: 32px;
+  font-weight: bold;
+  font-size: calc(16px + 1 * (100vw - 375px) / 1025);
+}
+main .aboutme_intro .aboutme_intro_wrapper p {
+  margin-bottom: 80px;
+  font-size: calc(15px + 2 * (100vw - 375px) / 1025);
+}
+main .aboutme_intro .intro_profile {
+  width: 100%;
+  margin-bottom: 100px;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_intro .intro_profile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+main .aboutme_intro .intro_profile .image_flex_wrapper {
+  width: 100%;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_intro .intro_profile .image_flex_wrapper {
+    align-self: flex-end;
+  }
+}
+main .aboutme_intro .intro_profile .image_flex_wrapper .profile_image {
+  width: 136px;
+  margin: 0 auto;
+  aspect-ratio: 1/1.2;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.25), -4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0);
+  -moz-box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.25), -4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0);
+  -webkit-box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.25), -4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0);
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_intro .intro_profile .image_flex_wrapper .profile_image {
+    width: 72%;
+    margin: 0 auto;
+    align-self: flex-end;
+  }
+}
+main .aboutme_intro .intro_profile section {
+  width: 100%;
+}
+main .aboutme_intro .intro_profile section .profile_name {
+  font-weight: bold;
+  font-size: calc(18px + 2 * (100vw - 375px) / 1025);
+}
+main .aboutme_intro .intro_profile section .profile_name_kana {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: calc(12px + 2 * (100vw - 375px) / 1025);
+}
+main .aboutme_intro .intro_profile section .profile_history {
+  margin-bottom: 80px;
+}
+main .aboutme_intro .intro_profile section .profile_history p {
+  margin-bottom: 8px;
+}
+main .aboutme_intro .profile_text_wrapper {
+  width: 100%;
+  margin-bottom: 100px;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_intro .profile_text_wrapper {
+    width: 80%;
+    margin: 0 auto 100px 0;
+  }
+  main .aboutme_intro .profile_text_wrapper .profile_flex_pc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+main .aboutme_intro .profile_text_wrapper h2 {
+  margin-bottom: 24px;
+  font-weight: bold;
+  line-height: 1.8;
+  font-size: calc(16px + 2 * (100vw - 375px) / 1025);
+}
+main .aboutme_intro .profile_text_wrapper h2 span {
+  display: block;
+  font-size: 12px;
+  color: #B7C0C3;
+  font-family: "Nunito-italic";
+  font-weight: bolder;
+}
+main .aboutme_intro .profile_text_wrapper h3 {
+  margin-bottom: 64px;
+  font-weight: bold;
+  line-height: 1.8;
+  font-size: calc(15px + 1 * (100vw - 375px) / 1025);
+}
+main .aboutme_intro .profile_text_wrapper div {
+  width: 50%;
+  aspect-ratio: 1/0.8;
+  margin: 0 0 24px 24px;
+  border-radius: 20px;
+  overflow: hidden;
+  float: right;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_intro .profile_text_wrapper div {
+    margin: 40px auto;
+    float: none;
+  }
+}
+main .aboutme_intro .profile_text_wrapper p {
+  line-height: 1.8;
+  font-size: calc(15px + 1 * (100vw - 375px) / 1025);
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_intro .profile_text_wrapper p {
+    line-height: 2.2;
+  }
+}
+main .aboutme_skills {
+  width: 80%;
+  margin: 0 auto;
+}
+main .aboutme_skills .skills_wrapper {
+  margin-bottom: 160px;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_skills .skills_wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items {
+  width: 100%;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_skills .skills_wrapper .skills_flex_items {
+    margin-right: 60px;
+  }
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div {
+  margin-bottom: 38px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div p {
+  width: 100%;
+  font-family: "Nunito";
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  font-size: calc(16px + 2 * (100vw - 375px) / 1025);
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div span {
+  width: 100%;
+  height: 16px;
+  position: relative;
+  background-color: #F5F5F5;
+  border-radius: 9999px;
+  box-shadow:  inset 4px 4px 4px 0 rgba(22, 27, 29, 0.25), inset -4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0.5px);
+  -moz-box-shadow:  inset 4px 4px 4px 0 rgba(22, 27, 29, 0.25), inset -4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0.5px);
+  -webkit-box-shadow:  inset 4px 4px 4px 0 rgba(22, 27, 29, 0.25), inset -4px -4px 4px 0 rgb(250, 251, 255);
+  filter: blur(0.5px);
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #6F8086;
+  border-radius: 9999px;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+  box-shadow: inset 4px 4px 4px 0 rgba(22, 27, 29, 0.25);
+  filter: blur(0);
+  -moz-box-shadow: inset 4px 4px 4px 0 rgba(22, 27, 29, 0.25);
+  filter: blur(0);
+  -webkit-box-shadow: inset 4px 4px 4px 0 rgba(22, 27, 29, 0.25);
+  filter: blur(0);
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div span.anime::before {
+  width: 80%;
+  opacity: 1;
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div .figma.anime::before {
+  width: 60%;
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div .aftereffects.anime::before {
+  width: 30%;
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div .php.anime::before {
+  width: 50%;
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div .git.anime::before {
+  width: 50%;
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div .wordpress.anime::before {
+  width: 50%;
+}
+main .aboutme_skills .skills_wrapper .skills_flex_items div .aboutme_character {
+  width: 80%;
+  margin: 0 auto 80px auto;
+}
+main .aboutme_character {
+  width: 80%;
+  margin: 0 auto 100px auto;
+}
+main .aboutme_character .character_flex {
+  margin-bottom: 40px;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_character .character_flex {
+    width: 72%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+}
+main .aboutme_character .character_flex .character_flex_item {
+  margin-bottom: 40px;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_character .character_flex .character_flex_item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+main .aboutme_character .character_flex .character_flex_item .character_title_wrap {
+  width: 100%;
+}
+main .aboutme_character .character_flex .character_flex_item .character_title_wrap p {
+  display: inline-block;
+  padding: 12px 28px;
+  margin-bottom: 32px;
+  font-family: "Nunito";
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 9999px;
+  font-size: calc(16px + 2 * (100vw - 375px) / 1025);
+}
+main .aboutme_character .character_flex .character_flex_item .character_texts {
+  width: 100%;
+}
+main .aboutme_character .character_flex .character_flex_item .character_texts li {
+  margin: 16px 0 24px 32px;
+  font-weight: bold;
+  font-size: calc(15px + 1 * (100vw - 375px) / 1025);
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .aboutme_character .character_flex .character_flex_item .character_texts li {
+    width: 100%;
+    margin: 16px 0 24px 0;
+  }
+}
+main .aboutme_character .character_personality_title {
+  display: inline-block;
+  padding: 16px 32px;
+  margin-bottom: 32px;
+  font-family: "Nunito";
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 9999px;
+  font-size: calc(16px + 2 * (100vw - 375px) / 1025);
+}
+main .aboutme_character .character_personality {
+  margin: 0 32px;
+  line-height: 1.8;
+  font-size: calc(14px + 2 * (100vw - 375px) / 1025);
+}
+main .column_wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+main .column_wrap .column_lists {
+  margin-bottom: 80px;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .column_wrap .column_lists {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+main .column_wrap .column_list_flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+main .column_wrap .column_list_flex .column_item {
+  width: 100%;
+  margin: 20px 10px;
+}
+main .column_wrap .column_list_flex .column_item a {
+  display: block;
+}
+main .column_wrap .column_list_flex .column_item a .column_image {
+  width: 100%;
+  aspect-ratio: 1/0.6;
+  filter: grayscale(90%);
+  border-radius: 10px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+main .column_wrap .column_list_flex .column_item a .column_date {
+  font-family: "Nunito";
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: calc(12px + 2 * (100vw - 375px) / 1025);
+}
+main .column_wrap .column_list_flex .column_item a .column_title {
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: calc(14px + 1 * (100vw - 375px) / 1025);
+}
+main .column_wrap .column_list_flex .column_item a .column_text {
+  font-size: calc(13px + 1 * (100vw - 375px) / 1025);
+}
+main .main__button_column {
+  width: 100%;
+  margin-bottom: 100px;
+}/*# sourceMappingURL=about.css.map */
