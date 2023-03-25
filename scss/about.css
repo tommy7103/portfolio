@@ -29,7 +29,7 @@ html {
 
 body {
   background-color: #F5F5F5;
-  color: #6F8086;
+  color: #6f8086;
 }
 
 *, *::before, *::after {
@@ -97,7 +97,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #6F8086;
+  color: #6f8086;
 }
 
 .loading_wrapper {
@@ -163,7 +163,7 @@ header .ham_icon::before, header .ham_icon::after {
   content: "";
   width: 48px;
   height: 3px;
-  background-color: #6F8086;
+  background-color: #6f8086;
   border-radius: 9999px;
   transition: all 0.4s ease-in-out;
   position: absolute;
@@ -302,7 +302,7 @@ main .main__button .button {
   font-family: "Nunito";
   font-weight: bold;
   text-decoration: none;
-  color: #6F8086;
+  color: #6f8086;
   letter-spacing: 0.16em;
   line-height: 50px;
   background-color: #F5F5F5;
@@ -332,7 +332,7 @@ main .main__button .button::before {
   left: -100%;
   width: 72px;
   height: 72px;
-  background-color: #6F8086;
+  background-color: #6f8086;
   border-radius: 9999px;
   transition: 0.4s ease-in-out;
   box-shadow: 4px 4px 4px 0 rgba(22, 27, 29, 0.15),-4px -4px 4px 0 rgb(250, 251, 255);
@@ -612,7 +612,7 @@ main .aboutme_skills .skills_wrapper .skills_flex_items div span::before {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #6F8086;
+  background-color: #6f8086;
   border-radius: 9999px;
   opacity: 0;
   transition: all ease-in-out 0.5s;

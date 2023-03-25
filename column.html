@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja" class="no-js">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nakatomi Haruka portfolio site</title>
-    <meta name="description" content="中富春香のポートフォリオサイトです。">
-    <meta property="og:title" content="Nakatomi Haruka portfolio site">
-    <meta property="og:description" content="中富春香のポートフォリオサイトです。">
-    <meta property="og:image" content="image.jpg">
-    <meta property="og:image:alt" content="中富春香のポートフォリオサイトです。">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nakatomiharuka.com/portfolio/">
-    <meta name="twitter:card" content="中富春香のポートフォリオサイトです。">
-    <link rel="icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/column.css">
-    <script src="js/lottie.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Nunito:ital,wght@0,600;0,700;1,800&family=Staatliches&display=swap" rel="stylesheet"></head>
+    <head prefix="og: https://ogp.me/ns#">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="中富春香のポートフォリオサイトです。">
+        <title>Nakatomi Haruka portfolio site</title>
+        <meta property="og:title" content="Nakatomi Haruka portfolio site">
+        <meta property="og:description" content="中富春香のポートフォリオサイトです。">
+        <meta property="og:image" content="image.jpg">
+        <meta property="og:image:alt" content="中富春香のポートフォリオサイトです。">
+        <meta property="og:locale" content="ja_JP">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://nakatomiharuka.com/portfolio/">
+        <meta name="twitter:card" content="中富春香のポートフォリオサイトです。">
+        <link rel="icon" href="img/polar_bear.svg">
+        <link rel="apple-touch-icon" href="img/polar_bear.svg">
+        <link rel="stylesheet" href="scss/column.css">
+        <script src="js/lottie.min.js"></script>
+    </head>
 <body>
     <div id="loading_wrapper" class="loading_wrapper">
         <div id="loading" class="loading"></div>
@@ -47,76 +43,74 @@
         </div>
     </header>
     <main id="main">
-        <section class="main__column">
+        <section class="main__visual">
             <h1 class="title_en">Column</h1>
             <p class="title_ja">読書日記.</p>
-            <div class="column_flex">
-                <div class="column_flex_items">
-                    <div id="column01" class="column_flex_item fadeUpTrigger">
-                        <hr>
-                        <p class="item_date">2023.01.06</p>
-                        <h1 class="item_title">移り変わる季節と、変わらない日常</h1>
-                        <p class="item_book">季節の記憶 / 保坂和志</p>
-                        <div class="item_image"><img class="lazyload" data-src="img/column_hosaka.jpg" alt="本"></div>
-                        <p class="item_text">保坂和志さんの書く文章が好きです。食事しながら読むと食べるのを忘れるくらい、今回も夢中になって読んでしまいました。<br>鎌倉の稲村ヶ崎が舞台で、シングルファーザーの中野とその息子のクイちゃんの日常が描かれた話。ページをめくってもめくっても、なにかしらのドラマが起こったり登場人物の関係が変わったりするわけではないのだけれど、この本に流れる雰囲気が終始好きだった。中野が見たまま感じたままにつらつらと書き綴る感じ。日常として変わらぬ時間が過ぎていく中で季節がゆっくりと移り変わっていく様は、なんだか少し寂しく感じた。</p>
-                    <div id="column02" class="column_flex_item fadeUpTrigger">
-                        <hr>
-                        <p class="item_date">2022.1.04</p>
-                        <h1 class="item_title">誰かを愛するということについて</h1>
-                        <p class="item_book">神様のボート / 江國香織</p>
-                        <div class="item_image"><img class="lazyload" data-src="img/column_ekuni.jpg" alt="本"></div>
-                        <p class="item_text">親子の愛。恋人との愛。愛することってとても複雑で面倒くさいもののように感じるけれど、それを与えたりもらったり、満たされたり求めたりすることで人生を全うするということは、ヒトとして生まれてきた特権のような気もする。</p>
-                    </div>
-                    <div id="column03" class="column_flex_item fadeUpTrigger">
-                        <hr>
-                        <p class="item_date">2022.12.30</p>
-                        <h1 class="item_title">民藝ってなんだ？</h1>
-                        <p class="item_book">わかりやすい民藝 / 高木崇男</p>  
-                        <div class="item_image"><img class="lazyload" data-src="img/column_takagi.jpg" alt="本"></div>
-                        <p class="item_text">「民藝」と聞くと、ぼんやりとこんなもんかなとイメージはできていたけれど、じゃあ一体なんなんだ？という問いが生まれたので手に取ってみた。「民藝＝用の美＝機能美」ではないということに驚いた。哲学的な定義も多く、「〜ではない」ことでそのものを定義する。もともと地域の人々の間にあった美を政府から押し付けられる美の価値観から守るために生まれ、また決して確率した過去の概念ではなく今も存在し続けているということを知り、もっと民藝と向き合いたくなってしまいました。</p>
-                    </div>
-                    <div id="column04" class="column_flex_item fadeUpTrigger">
-                        <hr>
-                        <p class="item_date">2022.12.29</p>
-                        <h1 class="item_title">飲んだことのないウイスキーの味</h1>
-                        <p class="item_book">もしも僕らのことばがウイスキーであったなら / 村上春樹</p>
-                        <div class="item_image"><img class="lazyload" data-src="img/column_murakami.jpg" alt="本"></div>
-                        <p class="item_text">偶然聞いたTOKYO FMで福山雅治さんが本を朗読している番組の内容がこの本だったことを知って購入。飲んだことのない異国のウイスキーの味と、行ったこともない土地の空気を想像できて読んでいて幸せな気持ちになりました。このエッセイを読み終えてから、留学生のころにいろんなヨーロッパの国を旅したことを思い出し、もう一度行きたいなと思った。あの頃よりはだいぶ成長しているだろうし、お酒の味もわかるような気がする。こんな世の中になってしまったからこそ、すごくすごく恵まれた環境にいたんだなぁなどと、その土地を離れてから思うことがたくさんある</p>
-                    </div>
-                    <div id="column05" class="column_flex_item fadeUpTrigger">
-                        <hr>
-                        <p class="item_date">2022.12.28</p>
-                        <h1 class="item_title">優しさと、思考の柔軟さ</h1>
-                        <p class="item_book">幸せについて / 谷川俊太郎</p>
-                        <div class="item_image"><img class="lazyload" data-src="img/column_tanikawa.jpg" alt="本"></div>
-                        <p class="item_text">選ぶ言葉、文脈からその人の優しさと、思考の柔軟さが伝わる作品。幸せについて考えれば考えるほど難しいと思っていたけれど、「幸せだと気づかないくらいの、BGMみたいな幸せが一番確実な幸せ」という谷川俊太郎さんの言葉に心の中のなにかがほどけるような感覚がありました。</p>
-                    </div>
-                    <div id="column06" class="column_flex_item fadeUpTrigger">
-                        <hr>
-                        <p class="item_date">2022.12.27</p>
-                        <h1 class="item_title">自分がブレてしまいそうな時に</h1>
-                        <p class="item_book">今日もていねいに 。 / 松浦弥太郎</p>
-                        <div class="item_image"><img class="lazyload" data-src="img/column_matsuura.jpg" alt="本"></div>
-                        <p class="item_text">自分がブレてしまいそうな時に読みたい本。<br>浅はかな考えで、焦ってなにかに取り組むのは良くない。ただ、ゆっくりやることが、丁寧なこととも限らない。何が正しいのかじっくり考えらる余裕がない、そんな時に読みたい本でした。</p>
-                    </div>
+        </section>
+        <section class="main__column">
+            <div class="column_container">
+                <div class="fade-up-trigger">
+                    <p class="item_date">2023.01.06</p>
+                    <h1 class="item_title">移り変わる季節と、変わらない日常</h1>
+                    <p class="item_book">季節の記憶 / 保坂和志</p>
+                    <div><img class="lazyload" data-src="img/column_hosaka.jpg" alt="本"></div>
+                    <p class="item_text">保坂和志さんの書く文章が好きです。食事しながら読むと食べるのを忘れるくらい、今回も夢中になって読んでしまいました。<br>鎌倉の稲村ヶ崎が舞台で、シングルファーザーの中野とその息子のクイちゃんの日常が描かれた話。ページをめくってもめくっても、なにかしらのドラマが起こったり登場人物の関係が変わったりするわけではないのだけれど、この本に流れる雰囲気が終始好きだった。中野が見たまま感じたままにつらつらと書き綴る感じ。日常として変わらぬ時間が過ぎていく中で季節がゆっくりと移り変わっていく様は、なんだか少し寂しく感じた。</p>
+                </div>
+                <div class="fade-up-trigger">
+                    <p class="item_date">2022.1.04</p>
+                    <h1 class="item_title">誰かを愛するということについて</h1>
+                    <p class="item_book">神様のボート / 江國香織</p>
+                    <div><img class="lazyload" data-src="img/column_ekuni.jpg" alt="本"></div>
+                    <p class="item_text">親子の愛。恋人との愛。愛することってとても複雑で面倒くさいもののように感じるけれど、それを与えたりもらったり、満たされたり求めたりすることで人生を全うするということは、ヒトとして生まれてきた特権のような気もする。</p>
+                </div>
+                <div class="fade-up-trigger">
+                    <p class="item_date">2022.12.30</p>
+                    <h1 class="item_title">民藝ってなんだ？</h1>
+                    <p class="item_book">わかりやすい民藝 / 高木崇男</p>  
+                    <div><img class="lazyload" data-src="img/column_takagi.jpg" alt="本"></div>
+                    <p class="item_text">「民藝」と聞くと、ぼんやりとこんなもんかなとイメージはできていたけれど、じゃあ一体なんなんだ？という問いが生まれたので手に取ってみた。「民藝＝用の美＝機能美」ではないということに驚いた。哲学的な定義も多く、「〜ではない」ことでそのものを定義する。もともと地域の人々の間にあった美を政府から押し付けられる美の価値観から守るために生まれ、また決して確率した過去の概念ではなく今も存在し続けているということを知り、もっと民藝と向き合いたくなってしまいました。</p>
+                </div>
+                <div class="fade-up-trigger">
+                    <p class="item_date">2022.12.29</p>
+                    <h1 class="item_title">飲んだことのないウイスキーの味</h1>
+                    <p class="item_book">もしも僕らのことばがウイスキーであったなら / 村上春樹</p>
+                    <div><img class="lazyload" data-src="img/column_murakami.jpg" alt="本"></div>
+                    <p class="item_text">偶然聞いたTOKYO FMで福山雅治さんが本を朗読している番組の内容がこの本だったことを知って購入。飲んだことのない異国のウイスキーの味と、行ったこともない土地の空気を想像できて読んでいて幸せな気持ちになりました。このエッセイを読み終えてから、留学生のころにいろんなヨーロッパの国を旅したことを思い出し、もう一度行きたいなと思った。あの頃よりはだいぶ成長しているだろうし、お酒の味もわかるような気がする。こんな世の中になってしまったからこそ、すごくすごく恵まれた環境にいたんだなぁなどと、その土地を離れてから思うことがたくさんある</p>
+                </div>
+                <div class="fade-up-trigger">
+                    <p class="item_date">2022.12.28</p>
+                    <h1 class="item_title">優しさと、思考の柔軟さ</h1>
+                    <p class="item_book">幸せについて / 谷川俊太郎</p>
+                    <div><img class="lazyload" data-src="img/column_tanikawa.jpg" alt="本"></div>
+                    <p class="item_text">選ぶ言葉、文脈からその人の優しさと、思考の柔軟さが伝わる作品。幸せについて考えれば考えるほど難しいと思っていたけれど、「幸せだと気づかないくらいの、BGMみたいな幸せが一番確実な幸せ」という谷川俊太郎さんの言葉に心の中のなにかがほどけるような感覚がありました。</p>
+                </div>
+                <div class="fade-up-trigger">
+                    <p class="item_date">2022.12.27</p>
+                    <h1 class="item_title">自分がブレてしまいそうな時に</h1>
+                    <p class="item_book">今日もていねいに 。 / 松浦弥太郎</p>
+                    <div><img class="lazyload" data-src="img/column_matsuura.jpg" alt="本"></div>
+                    <p class="item_text">自分がブレてしまいそうな時に読みたい本。<br>浅はかな考えで、焦ってなにかに取り組むのは良くない。ただ、ゆっくりやることが、丁寧なこととも限らない。何が正しいのかじっくり考えらる余裕がない、そんな時に読みたい本でした。</p>
                 </div>
             </div>
         </section>
     </main>
-    <footer id="footer">
-        <div class="footer__shapes">
-            <span class="footer__shape shape1"></span>
-            <span class="footer__shape shape2"></span>
-        </div>
-        <div class="footer__wrap">
-            <ul class="footer__nav">
-                <li class="nav_item"><a href="index.html" class="nav_item_text">トップ</a></li>
-                <li class="nav_item"><a href="about.html" class="nav_item_text">自身のこと</a></li>
-                <li class="nav_item"><a href="index.html#main__works" class="nav_item_text">作品</a></li>
-                <li class="nav_item"><a href="column.html" class="nav_item_text">コラム</a></li>
+    <footer>
+        <div class="footer__wrapper">
+            <ul>
+                <li><a href="index.html">トップ</a></li>
+                <li><a href="about.html">自身のこと</a>
+                    <ul class="nav_about">
+                        <li><a href="about.html">ープロフィール</a></li>
+                        <li><a href="about.html/#aboutme_skills">ースキル</a></li>
+                        <li><a href="about.html/#aboutme_character">ーキャラクター</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html/#main__works">作品</a></li>
+                <li><a href="#main">コラム</a></li>
             </ul>
-            <div class="copyright">copyright 2023 Nakatomi Haruka portfolio site</div>
+            <div class="footer__image"><img src="img/polar_bear.svg" alt="シロクマのイラスト"></div>
         </div>
+        <div class="copyright">copyright 2023 Nakatomi Haruka portfolio site</div>
     </footer>
     <script src="js/lazyload.min.js"></script>
     <script src="js/main.js"></script>
