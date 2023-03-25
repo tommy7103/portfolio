@@ -1,0 +1,92 @@
+@use "config/import" as i;
+
+main{
+    @include i.screen_pc{
+        @media (min-width:960px){
+            width:72%;
+        }
+    }
+    .main__visual{
+        width:100%;
+        height:i.$height_vh;
+        @include i.display_flex(column, center);
+    }
+    .main__column{
+        width:90%;
+        padding: 40px 0;
+        margin: 0 auto 40px auto;
+        background-color: i.$color_bg;
+        background-image:
+            linear-gradient(-90deg, rgba(111, 128, 134, .1) 1px, rgba(111, 128, 134, 0) 1px),
+            linear-gradient(rgba(111, 128, 134, .1) 1px, rgba(111, 128, 134, 0) 1px);
+        background-size: 20px 20px;
+
+        .column_container{
+            width:90%;
+            margin:0 auto;
+
+            div{
+                width:100%;
+                margin-bottom: 60px;
+
+                *{
+                    margin-bottom: 16px;
+                    @include i.screen_pc{
+                        @media (min-width:960px){
+                            margin-bottom: 32px;
+                        }
+                    }
+                }
+                .item_date{
+                    @include i.font_size(12, 2);
+                }
+                h1{
+                    padding: 0 8px;
+                    display: inline-block;
+                    position: relative;
+                    font-weight: bold;
+                    z-index: 1;
+                    @include i.font_size(15, 2);
+
+                    &::before{
+                        content:"";
+                        position: absolute;
+                        width:100%;
+                        height:100%;
+                        top:0;
+                        left:0;
+                        background-color: rgba(196, 220, 88, .5);
+                        transform: skewX(-15deg);
+                        z-index: -1;
+                    }
+                }
+                .item_book{
+                    font-weight: bold;
+                    @include i.font_size(14, 2);
+                }
+                div{
+                    width: 100%;
+                    max-width: 480px;
+                    aspect-ratio: 3 / 2;
+                    margin-bottom: 24px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    @include i.screen_pc{
+                        @media (min-width:960px){
+                            margin-bottom: 32px;
+                        }
+                    }
+                }
+                .item_text{
+                    letter-spacing: .18em;
+                    @include i.screen_pc{
+                        @media (min-width:960px){
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
