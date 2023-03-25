@@ -1,0 +1,351 @@
+@use "config/import" as i;
+
+main{
+    .aboutme_title{
+        padding-top: 32px;
+        margin-bottom: 80px;
+        font-family: i.$font_en_italic;
+        font-weight: bolder;
+        color: i.$color_text_shadow;
+        letter-spacing: .15em;
+        @include i.shadow("text-shadow", unquote("1px 1px 2px #f5f5f5,-1px -1px 2px rgb(0, 0, 0,0.3)"), .25px);
+        @include i.font_size(48, 8);
+    }
+    .main__visual{
+        width:100%;
+        height:i.$height_vh;
+        @include i.display_flex(column, center);
+    }
+    .aboutme_intro{
+        width: 80%;
+        margin:0 auto;
+
+        .aboutme_intro_wrapper{
+            h2{
+                margin-bottom: 32px;
+                font-weight: bold;
+                @include i.font_size(16, 1);
+            }
+            p{
+                margin-bottom: 80px;
+                @include i.font_size(15, 2);
+            }
+        }
+        .intro_profile{
+            width:100%;
+            margin-bottom: 100px;
+            @include i.screen_pc{
+                @media (min-width:960px){
+                    @include i.display_flex(row, space-between);
+                }
+            }
+
+            .image_flex_wrapper{
+                width:100%;
+                @include i.screen_pc{
+                    @media (min-width:960px){
+                        align-self: flex-end;
+                    }
+                }
+
+                .profile_image{
+                    width:136px;
+                    margin:0 auto;
+                    aspect-ratio: 1 / 1.2;
+                    border-radius: 40px;
+                    overflow: hidden;
+                    @include i.shadow("box-shadow", unquote("4px 4px 4px 0 rgba(22, 27, 29, 0.25), -4px -4px 4px 0 rgb(250, 251, 255)"), 0);
+                    @include i.screen_pc{
+                        @media (min-width:960px){
+                            width:72%;
+                            margin:0 auto;
+                            align-self: flex-end;
+                        }
+                    }
+                }
+            }
+            section{
+                width:100%;
+
+                .profile_name{
+                    font-weight: bold;
+                    @include i.font_size(18, 2);
+                }
+                .profile_name_kana{
+                    margin-bottom: 40px;
+                    font-weight: bold;
+                    @include i.font_size(12, 2);
+                }
+                .profile_history{
+                    margin-bottom: 80px;
+
+                    p{
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+        .profile_text_wrapper{
+            width:100%;
+            margin-bottom: 100px;
+            @include i.screen_pc{
+                @media (min-width:960px){
+                    width:80%;
+                    margin: 0 auto 100px 0;
+
+                    .profile_flex_pc{
+                        @include i.display_flex(row, space-between);
+                    }
+                }
+            }
+            h2{
+                margin-bottom: 24px;
+                font-weight: bold;
+                line-height: 1.8;
+                @include i.font_size(16, 2);
+
+                span{
+                    display: block;
+                    font-size: 12px;
+                    color: i.$color_font-dark;
+                    font-family: i.$font_en_italic;
+                    font-weight: bolder;
+                }
+            }
+            h3{
+                margin-bottom: 64px;
+                font-weight: bold;
+                line-height: 1.8;
+                @include i.font_size(15, 1);
+            }
+            div{
+                width:50%;
+                aspect-ratio: 1 / .8;
+                margin: 0 0 24px 24px;
+                border-radius: 20px;
+                overflow: hidden;
+                float: right;
+                @include i.screen_pc{
+                    @media (min-width:960px){
+                        margin: 40px auto;
+                        float: none;
+                    }
+                }
+            }
+            p{
+                line-height: 1.8;
+                @include i.font_size(15, 1);
+                @include i.screen_pc{
+                    @media (min-width:960px){
+                        line-height: 2.2;
+                    }
+                }
+            }
+        }
+    }
+    .aboutme_skills{
+        width:80%;
+        margin:0 auto;
+
+        .skills_wrapper{
+            margin-bottom: 160px;
+            @include i.screen_pc{
+                @media (min-width:960px){
+                    width:80%;
+                    @include i.display_flex(row, space-around);
+                }
+            }
+
+            .skills_flex_items{
+                width:100%;
+                @include i.screen_pc{
+                    @media (min-width:960px){
+                        margin-right: 60px;
+                    }
+                }
+
+                div{
+                    margin-bottom: 38px;
+                    @include i.display_flex(row,space-between);
+
+                    p{
+                        width:100%;
+                        font-family: i.$font_en;
+                        font-weight: bold;
+                        letter-spacing: .14em;
+                        @include i.font_size(16, 2);
+                    }
+                    span{
+                        width:100%;
+                        height:16px;
+                        position: relative;
+                        background-color: i.$color_bg;
+                        border-radius: 9999px;
+                        @include i.shadow("box-shadow", unquote(" inset 4px 4px 4px 0 rgba(22, 27, 29, 0.25), inset -4px -4px 4px 0 rgb(250, 251, 255)"), .5px);
+                        
+                        &::before{
+                            content:"";
+                            position: absolute;
+                            top:0;
+                            left: 0;
+                            width:0;
+                            height:100%;
+                            background-color: i.$color_font-main;
+                            border-radius: 9999px;
+                            opacity:0;
+                            transition: all ease-in-out .5s;
+                            @include i.shadow("box-shadow", unquote("inset 4px 4px 4px 0 rgba(22, 27, 29, 0.25)"), 0);
+                        }
+                        &.anime::before{
+                            width:80%;
+                            opacity: 1;
+                        }
+                    }
+                    .figma.anime::before{
+                        width:60%;
+                    }
+                    .aftereffects.anime::before{
+                        width:30%;
+                    }
+                    .php.anime::before{
+                        width:50%;
+                    }
+                    .git.anime::before{
+                        width:50%;
+                    }
+                    .wordpress.anime::before{
+                        width:50%;
+                    }
+                    .aboutme_character{
+                        width:80%;
+                        margin:0 auto 80px auto;
+                    }
+                }
+            }
+        }
+    }
+    .aboutme_character{
+        width:80%;
+        margin:0 auto 100px auto;
+
+        .character_flex{
+            margin-bottom: 40px;
+            @include i.screen_pc{
+                @media (min-width:960px){
+                    width:72%;
+                    @include i.display_flex(row, space-around);
+                }
+            }
+
+            .character_flex_item{
+                margin-bottom: 40px;
+                @include i.screen_pc{
+                    @media (min-width:960px){
+                        width:100%;
+                        @include i.display_flex(row, flex-start);
+                    }
+                }
+
+                .character_title_wrap{
+                    width:100%;
+
+                    p{
+                        display: inline-block;
+                        padding:12px 28px;
+                        margin-bottom: 32px;
+                        font-family: i.$font_en;
+                        font-weight: bold;
+                        background-color: i.$color_font-sub;
+                        border-radius: 9999px;
+                        @include i.font_size(16, 2);
+                    }
+                }
+                .character_texts{
+                    width:100%;
+
+                    li{
+                        margin:16px 0 24px 32px;
+                        font-weight: bold;
+                        @include i.font-size(15, 1);
+                        @include i.screen_pc{
+                            @media (min-width:960px){
+                                width:100%;
+                                margin:16px 0 24px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .character_personality_title{
+            display: inline-block;
+            padding:16px 32px;
+            margin-bottom: 32px;
+            font-family: i.$font_en;
+            font-weight: bold;
+            background-color: i.$color_font-sub;
+            border-radius: 9999px;
+            @include i.font_size(16, 2);
+        }
+        .character_personality{
+            margin:0 32px;
+            line-height: 1.8;
+            @include i.font-size(14, 2);
+        }
+    }
+    .column_wrap{
+        width:90%;
+        margin: 0 auto;
+
+        .column_lists{
+            margin-bottom: 80px;
+            @include i.screen_pc{
+                @media (min-width:960px){
+                    width:100%;
+                    @include i.display_flex(row, center);
+                }
+            }
+        }
+
+        .column_list_flex{
+            width:100%;
+            @include i.display_flex(row, center);
+
+            .column_item{
+                width:100%;
+                margin:20px 10px;
+
+                a{
+                    display: block;
+
+                    .column_image{
+                        width:100%;
+                        aspect-ratio: 1 / .6;
+                        filter: grayscale(90%);
+                        border-radius: 10px;
+                        margin-bottom: 24px;
+                        overflow: hidden;
+                    }
+                    .column_date{
+                        font-family: i.$font_en;
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                        @include i.font-size(12, 2);
+                    }
+                    .column_title{
+                        font-weight: bold;
+                        margin-bottom: 16px;
+                        @include i.font-size(14, 1);
+                    }
+                    .column_text{
+                        @include i.font-size(13, 1);
+                    }
+                }
+            }
+        }
+    }
+    .main__button_column{
+        width:100%;
+        margin-bottom: 100px;
+    }
+}

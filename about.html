@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja" class="no-js">
-<head>
+<head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="中富春香のポートフォリオサイトです。">
@@ -13,15 +13,11 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nakatomiharuka.com/portfolio/">
     <meta name="twitter:card" content="中富春香のポートフォリオサイトです。">
-    <link rel="icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="icon" href="img/polar_bear.svg">
+    <link rel="apple-touch-icon" href="img/polar_bear.svg">
+    <link rel="stylesheet" href="scss/about.css">
     <script src="js/lottie.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Nunito:ital,wght@0,600;0,700;1,800&family=Staatliches&display=swap" rel="stylesheet"></head>
+</head>
 <body>
     <div id="loading_wrapper" class="loading_wrapper">
         <div id="loading" class="loading"></div>
@@ -52,15 +48,15 @@
             <p class="title_ja main__title_aboutme">自身のこと.</p>
         </section>
         <section class="aboutme_intro">
-            <div class="aboutme_intro_wrap fadeUpTrigger">
-                <h2 class="aboutme_intro_text">デザインで、誰かの伝えたい「思い」をカタチにする。何歳になっても、挑戦をし続ける人でありたい。</h2>
-                <p class="aboutme_intro_text">まじめで好奇心旺盛、人を喜ばせることが好きな性格です。</p>    
+            <div class="aboutme_intro_wrapper fade-up-trigger">
+                <h2>デザインで、誰かの伝えたい「思い」をカタチにする。何歳になっても、挑戦をし続ける人でありたい。</h2>
+                <p>まじめで好奇心旺盛、人を喜ばせることが好きな性格です。</p>    
             </div>
             <div class="intro_profile">
-                <div class="image_flex_wrap">
+                <div class="image_flex_wrapper">
                     <div class="profile_image"><img class="lazyload" data-src="img/aboutme_profile.jpg" alt="プロフィール"></div>
                 </div>
-                <section class="profile_flex fadeUpTrigger">
+                <section>
                     <h1 class="aboutme_title aboutme_title_profile">Profile</h1>
                     <p class="profile_name">中富 春香</p>
                     <p class="profile_name_kana">ナカトミ ハルカ</p>
@@ -69,73 +65,75 @@
                         <p class="profile_history_text">東京都出身</p>
                         <p class="profile_history_text">東京都立上野高等学校を卒業</p>
                         <p class="profile_history_text">法政大学国際文化学部国際文化学科を中退</p>
-                        <p class="profile_history_text">デジタルハリウッドSTUDIO<br>Webデザイナー専攻を卒業</p>
+                        <p class="profile_history_text">デジタルハリウッドSTUDIO Webデザイナー専攻を卒業</p>
                     </div>
-                    <p class="profile_text">大学在学時、スペインへ留学をした際に体験した現地のコーヒー文化に感動し、バリスタになることを決意。現地で経験することが一番だと思い、帰国後に大学を辞め、ワーホリの資金集めのためにカフェで働く。しかしコロナ流行のためワーホリは断念。以前から興味があった「デザイン」に関わる仕事がしたいと思い、WEBデザイナーという仕事があることを知る。2022年6月にデジタルハリウッドスタジオに入学し、WEBデザインを学ぶ。</p>
+                    <p class="profile_text">大学在学時、スペイン留学で体験した<br>現地のコーヒー文化に感動し、バリスタになることを決意。<br>帰国後に大学を辞め、ワーホリの資金集めのためにカフェで働くが、コロナ流行のためワーホリは断念。以前からやってみたかった「デザイン」に関わる仕事がしたいと思い、WEB制作会社への就職を目指す。<br>2022年6月にデジタルハリウッドスタジオに入学し、WEBデザインを学ぶ。卒業制作が校内の優秀作品として選ばれ、デジタルハリウッドSTUDIO クリエイターズオーディションに出場。</p>
                 </section>
             </div>
-            <section class="profile_text_flex">
-                <h2 class="profile_head fadeUpTrigger">1杯のコーヒーを通じて、日々たくさんの方と出会い、繋がることができる喜び</h2>
-                <div class="profile_text_image fadeUpTrigger"><img data-src="img/aboutme_coffee.jpg" alt="バリスタ" class="lazyload"></div>
-                <p class="profile_text profile_text_position  fadeUpTrigger">これまでの仕事では、１杯のコーヒーを通じて多くの人と関わってきました。常連さんやそうでない方も、自分がつくるコーヒーで笑顔になる、喜んでくれる。お客様と誠実に向き合い心を通わせるバリスタの仕事を通じていつの間にか私は、コーヒーだけでなく人と関わることも好きになっていました。</p>
+            <section class="profile_text_wrapper">
+                <h2 class="fade-up-trigger">一杯のコーヒーを通じて<span>A cup of coffee will make people happy.</span></h2>
+                <h3 class="fade-up-trigger">たくさんの方の笑顔を作り、繋がることができる喜び。</h3>
+                <div class="fade-up-trigger"><img data-src="img/aboutme_coffee.jpg" alt="バリスタ" class="lazyload"></div>
+                <p class="fade-up-trigger">これまでの仕事では、１杯のコーヒーを通じて多くの人と関わってきました。常連さんやそうでない方も、自分がつくるコーヒーで笑顔になる、喜んでくれる。<br>お客様と誠実に向き合い心を通わせるバリスタの仕事を通じていつの間にか私は、コーヒーだけでなく人と関わることも好きになっていました。</p>
             </section>
         </section>
-        <section class="aboutme_skills">
+        <section id="aboutme_skills" class="aboutme_skills">
             <h1 class="aboutme_title">Skills</h1>
-            <div class="skills_wrap">
-                <div class="skills_flex">
-                    <div class="skills_item"><p class="skills_title">Photoshop</p><span class="skills_meter"></span></div>
-                    <div class="skills_item"><p class="skills_title">Illustrator</p><span class="skills_meter"></span></div>
-                    <div class="skills_item"><p class="skills_title">XD</p><span class="skills_meter"></span></div>
-                    <div class="skills_item"><p class="skills_title">Figma</p><span class="skills_meter figma"></span></div>
-                    <div class="skills_item"><p class="skills_title">After Effects</p><span class="skills_meter aftereffects"></span></div>
+            <div class="skills_wrapper">
+                <div class="skills_flex_items">
+                    <div><p>Photoshop</p><span class="skills_meter"></span></div>
+                    <div><p>Illustrator</p><span class="skills_meter"></span></div>
+                    <div><p>XD</p><span class="skills_meter"></span></div>
+                    <div><p>Figma</p><span class="skills_meter figma"></span></div>
+                    <div><p>After Effects</p><span class="skills_meter aftereffects"></span></div>
                 </div>
-                <div class="skills_flex">
-                    <div class="skills_item"><p class="skills_title">HTML</p><span class="skills_meter"></span></div>
-                    <div class="skills_item"><p class="skills_title">CSS</p><span class="skills_meter"></span></div>
-                    <div class="skills_item"><p class="skills_title">Javascript</p><span class="skills_meter"></span></div>
-                    <div class="skills_item"><p class="skills_title">PHP</p><span class="skills_meter php"></span></div>
-                    <div class="skills_item"><p class="skills_title">Git / GitHub</p><span class="skills_meter git"></span></div>
-                    <div class="skills_item"><p class="skills_title">Wordpress</p><span class="skills_meter wordpress"></span></div>
+                <div class="skills_flex_items">
+                    <div><p>HTML</p><span class="skills_meter"></span></div>
+                    <div><p>CSS</p><span class="skills_meter"></span></div>
+                    <div><p>Javascript</p><span class="skills_meter"></span></div>
+                    <div><p>PHP</p><span class="skills_meter php"></span></div>
+                    <div><p>Git / GitHub</p><span class="skills_meter git"></span></div>
+                    <div><p>Wordpress</p><span class="skills_meter wordpress"></span></div>
                 </div>
             </div>
         </section>
-        <section class="aboutme_character">
+        <section id="aboutme_character" class="aboutme_character">
             <h1 class="aboutme_title">Character</h1>
-            <div class="character_flex fadeUpTrigger">
+            <div class="character_flex">
                 <div class="character_flex_item">
                     <div class="character_title_wrap">
-                        <p class="character_title">Good</p>
+                        <p>Good</p>
                     </div>
-                    <ul class="character_texts">
-                        <li class="character_text">思慮深い</li>
-                        <li class="character_text">好奇心旺盛</li>
-                        <li class="character_text">几帳面</li>
-                        <li class="character_text">ストレスを溜め込まない</li>
+                    <ul class="character_texts fade-up-trigger">
+                        <li>思慮深い</li>
+                        <li>好奇心旺盛</li>
+                        <li>几帳面</li>
+                        <li>ストレスを溜め込まない</li>
                     </ul>
                 </div>
                 <div class="character_flex_item">
                     <div class="character_title_wrap">
-                        <p class="character_title">Bad</p>
+                        <p>Bad</p>
                     </div>
-                    <ul class="character_texts">
-                        <li class="character_text">競争心が低い</li>
-                        <li class="character_text">神経質</li>
-                        <li class="character_text">正直</li>
-                        <li class="character_text">たまにマイペース</li>
+                    <ul class="character_texts fade-up-trigger">
+                        <li>競争心が低い</li>
+                        <li>神経質</li>
+                        <li>正直</li>
+                        <li>たまにマイペース</li>
                     </ul>
                 </div>
             </div>
-            <p class="profile_text character_summary fadeUpTrigger">まじめで落ち着いた性格だと言われます。<br>食べ物で例えると白米のような安心感があると友人から言われたことがありました。<br>絵を描くことが好きで、前職では手書きのメニューを作成したりしていました。<br>趣味は読書で、休日はお酒を片手に本を読んで幸せを感じています。</p>
+            <p class="character_personality_title">personality</p>
+            <p class="character_personality fade-up-trigger">周りからは、まじめで落ち着いた性格だとよく言われます。<br>食べ物で例えると白米のような安心感があると友人から言われたことがありました。<br>絵を描くことが好きで、前職では手書きのメニューを作成したりしていました。趣味は読書です。お酒を片手に、時間を気にせず本を読む休日が何よりの楽しみです。</p>
         </section>
         <section class="main__column">
             <h1 class="title_en">Column</h1>
             <p class="title_ja">読書日記.</p>
             <div class="column_wrap">
                 <div class="column_lists">
-                    <div class="column_list_flex fadeUpTrigger">
+                    <div class="column_list_flex fade-up-trigger">
                         <div class="column_item">
-                            <a href="column.html#column01" class="colum_link">
+                            <a href="column.html#column01">
                                 <div class="column_image"><img data-src="img/column_hosaka.jpg" alt="本" class="lazyload"></div>
                                 <p class="column_date">2022.01.06</p>
                                 <h2 class="column_title">移り変わる季節と、変わらない日常</h2>
@@ -143,7 +141,7 @@
                             </a>
                         </div>
                         <div class="column_item">
-                            <a href="column.html#column02" class="colum_link">
+                            <a href="column.html#column02">
                                 <div class="column_image"><img data-src="img/column_ekuni.jpg" alt="本" class="lazyload"></div>
                                 <p class="column_date">2022.01.04</p>
                                 <h2 class="column_title">誰かを愛するということについて</h2>
@@ -151,9 +149,9 @@
                             </a>
                         </div>    
                     </div>
-                    <div class="column_list_flex fadeUpTrigger">
+                    <div class="column_list_flex fade-up-trigger">
                         <div class="column_item">
-                            <a href="column.html#column03" class="colum_link">
+                            <a href="column.html#column03">
                                 <div class="column_image"><img data-src="img/column_takagi.jpg" alt="本" class="lazyload"></div>
                                 <p class="column_date">2022.12.30</p>
                                 <h2 class="column_title">民藝ってなんだろう</h2>
@@ -161,7 +159,7 @@
                             </a>
                         </div>
                         <div class="column_item">
-                            <a href="column.html#column04" class="colum_link">
+                            <a href="column.html#column04">
                                 <div class="column_image"><img data-src="img/column_murakami.jpg" alt="本" class="lazyload"></div>
                                 <p class="column_date">2022.12.29</p>
                                 <h2 class="column_title">飲んだことのないウイスキーの味</h2>
@@ -169,9 +167,9 @@
                             </a>
                         </div>    
                     </div>
-                    <div class="column_list_flex fadeUpTrigger">
+                    <div class="column_list_flex fade-up-trigger">
                         <div class="column_item">
-                            <a href="column.html#column05" class="colum_link">
+                            <a href="column.html#column05">
                                 <div class="column_image"><img data-src="img/column_tanikawa.jpg" alt="本" class="lazyload"></div>
                                 <p class="column_date">2022.12.28</p>
                                 <h2 class="column_title">優しさと、思考の柔軟さ</h2>
@@ -192,20 +190,23 @@
             <div class="main__button main__button_column"><a href="column.html" class="button">view more</a></div>    
         </section>
     </main>
-    <footer id="footer">
-        <div class="footer__shapes">
-            <span class="footer__shape shape1"></span>
-            <span class="footer__shape shape2"></span>
-        </div>
-        <div class="footer__wrap">
-            <ul class="footer__nav">
-                <li class="nav_item"><a href="index.html" class="nav_item_text">トップ</a></li>
-                <li class="nav_item"><a href="#main" class="nav_item_text">自身のこと</a></li>
-                <li class="nav_item"><a href="index.html#main__works" class="nav_item_text">作品</a></li>
-                <li class="nav_item"><a href="column.html" class="nav_item_text">コラム</a></li>
+    <footer>
+        <div class="footer__wrapper">
+            <ul>
+                <li><a href="index.html">トップ</a></li>
+                <li><a href="about.html">自身のこと</a>
+                    <ul class="nav_about">
+                        <li><a href="about.html">ープロフィール</a></li>
+                        <li><a href="#aboutme_skills">ースキル</a></li>
+                        <li><a href="#aboutme_character">ーキャラクター</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html/#main__works">作品</a></li>
+                <li><a href="column.html">コラム</a></li>
             </ul>
-            <div class="copyright">copyright 2023 Nakatomi Haruka portfolio site</div>
+            <div class="footer__image"><img src="img/polar_bear.svg" alt="シロクマのイラスト"></div>
         </div>
+        <div class="copyright">copyright 2023 Nakatomi Haruka portfolio site</div>
     </footer>
     <script src="js/lazyload.min.js"></script>
     <script src="js/main.js"></script>

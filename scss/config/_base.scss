@@ -7,7 +7,7 @@
 @include m.font_face("Kiwi Maru", "../fonts/KiwiMaru-Regular.ttf", normal, "ttf");
 @include m.font_face("Kiwi Maru", "../fonts/KiwiMaru-Medium.ttf", bold, "ttf");
 @include m.font_face("Nunito", "../fonts/Nunito-Bold.ttf", bold, "ttf");
-@include m.font_face("Nunito", "../fonts/Nunito-ExtraBoldItalic.ttf", bolder, "ttf");
+@include m.font_face("Nunito-italic", "../fonts/Nunito-ExtraBoldItalic.ttf", bolder, "ttf");
 @include m.font_face("Staatliches", "../fonts/Staatliches-Regular.ttf", bolder, "ttf");
 
 html{
@@ -295,6 +295,7 @@ footer{
     height:v.$height_vh;
     padding: 80px 0;
     position: relative;
+    border-radius: 40px 40px 0 0;
     background-color: v.$color_font-sub;
 
     .footer__wrapper{
