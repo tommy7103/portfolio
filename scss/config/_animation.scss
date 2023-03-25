@@ -1,0 +1,44 @@
+@mixin fadeUpAnime {
+    @keyframes fadeUpAnime{
+        from {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    };
+};
+@mixin ripples {
+    @keyframes ripples {
+        24%{
+            transform:scale(0,0);
+            opacity: 0.3;
+        }
+        60%{
+            transform:scale(0.8,0.8);
+            opacity: 0.2;
+        }
+        100%{
+            transform:scale(1.7,1.7);
+            opacity: 0;
+        }
+    }
+};
+@mixin scrollHorizon {
+    @keyframes scrollHorizon {
+        0%{
+            opacity: 1;
+        }
+        25%{
+            opacity: 0;
+        }
+        75%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+};

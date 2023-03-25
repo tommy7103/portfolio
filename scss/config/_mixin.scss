@@ -1,0 +1,45 @@
+@mixin position_center($top:50%,$left:50%,$tx:-50%,$ty:-50%) {
+    position:absolute;
+    top:$top;
+    left:$left;
+    transform:translate($tx,$ty);
+}
+@mixin display_flex($direction, $space){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: nowrap;
+    justify-content: $space;
+}
+@mixin screen_pc{
+    @media (min-width:960px){
+        @content;
+    }
+}
+@mixin font_face($font_family, $path, $weight: null, $exts: otf ttf) {
+    $src: null;
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+    @each $ext in $exts{
+        $format: map-get($formats, $ext);
+        $src: append($src, url(quote($path)) format(quote($format)), comma);
+    }
+    @font-face {
+        font-family: quote($font_family);
+        font-weight: $weight;
+        src:$src;
+    }
+}
+@mixin font_size($min,$max) {
+    $unit:$min * 1px;
+    font-size:calc(#{$unit} + #{$max} * (100vw - 375px) / 1025);
+}
+@mixin shadow($prop, $shadows, $filter) {
+    $set-prefix:"", -moz-, -webkit-;
+
+    @each $prefix in $set-prefix{
+        #{$prefix}#{$prop}: $shadows;
+        filter: blur($filter);
+    }
+}
