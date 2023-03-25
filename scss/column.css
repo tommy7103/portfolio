@@ -290,6 +290,7 @@ main .title_ja {
 }
 main .main__button {
   text-align: center;
+  margin-bottom: 100px;
 }
 @media (min-width: 960px) and (min-width: 960px) {
   main .main__button {
@@ -479,6 +480,8 @@ main .main__column .column_container div div {
   }
 }
 main .main__column .column_container div .item_text {
+  width: 90%;
+  margin: 0 auto 12px auto;
   letter-spacing: 0.18em;
 }
 @media (min-width: 960px) and (min-width: 960px) {

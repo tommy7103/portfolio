@@ -290,6 +290,7 @@ main .title_ja {
 }
 main .main__button {
   text-align: center;
+  margin-bottom: 100px;
 }
 @media (min-width: 960px) and (min-width: 960px) {
   main .main__button {
@@ -453,7 +454,7 @@ main .main__visual .main__visual_time .time_clock {
     margin: 40px 0;
   }
 }
-main .main__visual .main__visual_time .time_clock div {
+main .main__visual .main__visual_time .time_clock #second-hand, main .main__visual .main__visual_time .time_clock #minute-hand, main .main__visual .main__visual_time .time_clock #hour-hand {
   height: 8px;
   right: calc(50% - 5px);
   transform-origin: calc(100% - 5px) center;
@@ -475,6 +476,11 @@ main .main__visual .main__visual_time .time_clock #second-hand {
           animation: rotation-s 60s linear infinite;
   width: 45%;
   height: 4px;
+  right: calc(50% - 2px);
+  position: absolute;
+  top: calc(50% - 2px);
+  left: auto;
+  transform: translate(0, 0);
 }
 main .main__visual .main__visual_time .time_clock #minute-hand {
   -webkit-animation: rotation-m 3600s linear infinite;
@@ -756,13 +762,14 @@ main .main__aboutme .aboutme_profile .aboutme_text p {
 main .main__aboutme .aboutme_service_wrap .aboutme_service .service_flex .aboutme_item {
   width: 100%;
   position: relative;
+  padding-top: 42px;
   margin-bottom: 100px;
 }
 main .main__aboutme .aboutme_service_wrap .aboutme_service .service_flex .aboutme_item .service_title {
   width: 80%;
   z-index: 1;
   position: absolute;
-  top: 0;
+  top: 42px;
   left: 50%;
   transform: translate(-50%, 0);
   font-size: calc(16px + 2 * (100vw - 375px) / 1025);
