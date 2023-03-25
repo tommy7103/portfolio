@@ -238,6 +238,7 @@ main{
     }
     .main__button{
         text-align: center;
+        margin-bottom: 100px;
         @include m.screen_pc{
             @media (min-width:960px){
                 width:75%;

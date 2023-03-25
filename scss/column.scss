@@ -78,6 +78,8 @@ main{
                     }
                 }
                 .item_text{
+                    width:90%;
+                    margin:0 auto 12px auto;
                     letter-spacing: .18em;
                     @include i.screen_pc{
                         @media (min-width:960px){
