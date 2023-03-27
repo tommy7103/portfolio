@@ -16,7 +16,6 @@ main{
         .main__visual_time{
             display:none;
             width:100%;
-            position:relative;
             text-align: center;
             z-index: 1;
             @media (min-width:960px){
@@ -26,6 +25,7 @@ main{
     
             .time_clock{
                 width: 70%;
+                position:relative;
                 padding-top: 70%;
                 margin:40px auto;
                 border-radius: 9999px;
@@ -271,7 +271,7 @@ main{
 
                 p{
                     margin-bottom: 16px;
-                    @include i.font_size(16, 2);
+                    @include i.font_size(15, 3);
                 }
             }
         }
@@ -443,6 +443,12 @@ main{
     }
     .main__works{
         width:100%;
+        position: relative;
+        @include i.screen_pc{
+            @media (min-width:960px){
+                overflow: hidden;
+            }
+        };
 
         .works_slider_wrapper{
             width:100%;
@@ -452,20 +458,24 @@ main{
             overflow-y: hidden;
             -ms-overflow-style: none;
             scrollbar-width: none;
+            @include i.screen_pc{
+                @media (min-width:960px){
+                    overflow-x: hidden;
+                    margin-left:160px;
+                }
+            };
 
             &::-webkit-scrollbar{
                 display:none;
             }
             .works_slider{
-                top:0;
-                left:0;
                 width:calc(100vw * 6.4);
                 margin: 40px 0 40px 40px;
                 @include i.display_flex(row, space-between);
                 @include i.screen_pc{
                     @media (min-width:960px){
                         width:calc(100vw * 2.5);
-                        margin-left:160px;
+                        margin:0;
                     }
                 };
 
@@ -483,22 +493,8 @@ main{
                         @media (min-width:960px){
                             height:80vh;
                             margin: 40px 24px;
+                            transform: scale(1.05);
                         }
-                    };
-
-                    $images: url(../img/mockup_corporate.jpg), url(../img/mockup_reproduction.jpg), url(../img/mockup_lp.jpg), url(../img/mockup_namecard01.jpg), url(../img/mockup_namecard02.jpg), url(../img/mockup_banner.jpg), url(../img/mockup_portfolio.jpg);
-                    @each $image in $images {
-                        $num:index($images, $image);
-                        &:nth-of-type(#{$num}){
-                            background-image: $image;
-                        }
-                        @include i.screen_pc{
-                            @media (min-width:960px){
-                                &:hover{
-                                    transform: scale(1.05);
-                                }
-                            }
-                        };
                     };
 
                     .works_category{
@@ -534,6 +530,14 @@ main{
                         }
                     }
                 }
+
+                $images: url(../img/mockup_corporate.jpg), url(../img/mockup_reproduction.jpg), url(../img/mockup_lp.jpg), url(../img/mockup_namecard01.jpg), url(../img/mockup_namecard02.jpg), url(../img/mockup_banner.jpg), url(../img/mockup_portfolio.jpg);
+                @each $image in $images {
+                    $num:index($images, $image);
+                    .image#{$num}{
+                        background-image: $image;
+                    }
+                };
             }
             .scroll-horizon{
                 display: none;
@@ -568,6 +572,33 @@ main{
                     }
                 }
             }
+        }
+        .arrow-next{
+            display: none;
+            @include i.screen_pc{
+                @media (min-width:960px){
+                    display: block;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    width:64px;
+                    height:100%;
+        
+                    &::before{
+                        content:"";
+                        position: absolute;
+                        width:40px;
+                        height:40px;
+                        margin:64px 0 0 24px;
+                        top:50%;
+                        left:50%;
+                        border-left: i.$color_font-dark solid 4px;
+                        border-bottom: i.$color_font-dark solid 4px;
+                        transform: translate(-50%, -50%) rotate(45deg);
+                        cursor: pointer;
+                    }
+                }
+            };
         }
         .modal_contents{
             display: none;
@@ -676,16 +707,18 @@ main{
                             }
                         }
 
-                        div:nth-child(1){
+                        & > div:nth-child(1){
                             @include i.screen_pc{
                                 @media (min-width:960px){
+                                    width:100%;
                                     order: 2;
                                 }
                             }
                         }
-                        div:nth-child(2){
+                        & > div:nth-child(2){
                             @include i.screen_pc{
                                 @media (min-width:960px){
+                                    width:100%;
                                     order: 1;
                                 }
                             }
