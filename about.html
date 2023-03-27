@@ -45,19 +45,19 @@
     <main id="main">
         <section class="main__visual">
             <h1 class="title_en">About me</h1>
-            <p class="title_ja main__title_aboutme">自身のこと.</p>
+            <p class="title_ja">自身のこと.</p>
         </section>
         <section class="aboutme_intro">
-            <div class="aboutme_intro_wrapper fade-up-trigger">
-                <h2>デザインで、誰かの伝えたい「思い」をカタチにする。何歳になっても、挑戦をし続ける人でありたい。</h2>
-                <p>まじめで好奇心旺盛、人を喜ばせることが好きな性格です。</p>    
+            <div class="aboutme_intro_wrapper">
+                <h2 id="js-underline">デザインで、誰かの伝えたい「思い」をカタチにする。何歳になっても、挑戦をし続ける人でありたい。</h2>
+                <p class="fade-up-trigger">まじめで好奇心旺盛、人を喜ばせることが好きな性格です。</p>    
             </div>
             <div class="intro_profile">
                 <div class="image_flex_wrapper">
                     <div class="profile_image"><img class="lazyload" data-src="img/aboutme_profile.jpg" alt="プロフィール"></div>
                 </div>
                 <section>
-                    <h1 class="aboutme_title aboutme_title_profile">Profile</h1>
+                    <h1 class="aboutme_title aboutme_title_profile">Profile<span>プロフィール.</span></h1>
                     <p class="profile_name">中富 春香</p>
                     <p class="profile_name_kana">ナカトミ ハルカ</p>
                     <div class="profile_history">
@@ -71,14 +71,14 @@
                 </section>
             </div>
             <section class="profile_text_wrapper">
-                <h2 class="fade-up-trigger">一杯のコーヒーを通じて<span>A cup of coffee will make people happy.</span></h2>
-                <h3 class="fade-up-trigger">たくさんの方の笑顔を作り、繋がることができる喜び。</h3>
+                <h2 class="fade-up-trigger"><span>A cup of coffee will make people happy.</span>一杯のコーヒーを通して</h2>
+                <h3 class="fade-up-trigger">たくさんの方の笑顔を作り、繋がることができる喜びを経験しました。</h3>
                 <div><img data-src="img/aboutme_coffee.jpg" alt="バリスタ" class="lazyload"></div>
                 <p class="fade-up-trigger">これまでの仕事では、１杯のコーヒーを通じて多くの人と関わってきました。常連さんやそうでない方も、自分がつくるコーヒーで笑顔になる、喜んでくれる。<br>お客様と誠実に向き合い心を通わせるバリスタの仕事を通じていつの間にか私は、コーヒーだけでなく人と関わることも好きになっていました。</p>
             </section>
         </section>
         <section id="aboutme_skills" class="aboutme_skills">
-            <h1 class="aboutme_title">Skills</h1>
+            <h1 class="aboutme_title">Skills<span>スキル.</span></h1>
             <div class="skills_wrapper">
                 <div class="skills_flex_items">
                     <div><p>Photoshop</p><span class="skills_meter"></span></div>
@@ -98,7 +98,7 @@
             </div>
         </section>
         <section id="aboutme_character" class="aboutme_character">
-            <h1 class="aboutme_title">Character</h1>
+            <h1 class="aboutme_title">Character<span>キャラクター.</span></h1>
             <div class="character_flex">
                 <div class="character_flex_item">
                     <div class="character_title_wrap">
@@ -205,7 +205,7 @@
                         <li><a href="#aboutme_character">ーキャラクター</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html/#main__works">作品</a></li>
+                <li><a href="index.html#main__works">作品</a></li>
                 <li><a href="column.html">コラム</a></li>
             </ul>
             <div class="footer__image"><img src="img/polar_bear.svg" alt="シロクマのイラスト"></div>
@@ -214,6 +214,7 @@
     </footer>
     <script src="js/lazyload.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
     <script>
         lazyload();
     </script>

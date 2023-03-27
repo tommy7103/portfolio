@@ -273,7 +273,7 @@ main .title_en {
   font-family: "Nunito";
   font-weight: bolder;
   letter-spacing: 0.15em;
-  color: rgba(245, 245, 245, 0.5019607843);
+  color: rgba(245, 245, 245, 0.502);
   font-size: calc(36px + 20 * (100vw - 375px) / 1025);
   text-shadow: 1px 1px 2px #f5f5f5,-1px -1px 2px rgb(0, 0, 0,0.3);
   filter: blur(0.1px);
@@ -421,7 +421,6 @@ main .main__visual {
 main .main__visual .main__visual_time {
   display: none;
   width: 100%;
-  position: relative;
   text-align: center;
   z-index: 1;
 }
@@ -435,6 +434,7 @@ main .main__visual .main__visual_time {
 }
 main .main__visual .main__visual_time .time_clock {
   width: 70%;
+  position: relative;
   padding-top: 70%;
   margin: 40px auto;
   border-radius: 9999px;
@@ -498,7 +498,7 @@ main .main__visual .main__visual_time #time_date {
 main .main__visual .main__visual_time #time_date #time_today_date, main .main__visual .main__visual_time #time_date #time_today_time {
   font-family: "Staatliches";
   letter-spacing: 0.16em;
-  color: rgba(245, 245, 245, 0.5019607843);
+  color: rgba(245, 245, 245, 0.502);
   filter: 0.2px;
   font-size: calc(20px + 4 * (100vw - 375px) / 1025);
   text-shadow: 1px 1px 2px #f5f5f5, -1px -1px 2px #0000004d;
@@ -737,7 +737,7 @@ main .main__aboutme .aboutme_profile .aboutme_text {
 }
 main .main__aboutme .aboutme_profile .aboutme_text p {
   margin-bottom: 16px;
-  font-size: calc(16px + 2 * (100vw - 375px) / 1025);
+  font-size: calc(15px + 3 * (100vw - 375px) / 1025);
 }
 @media (min-width: 960px) and (min-width: 960px) {
   main .main__aboutme .aboutme_service_wrap {
@@ -909,6 +909,12 @@ main .main__aboutme .aboutme_service_wrap .aboutme_service .service_flex .aboutm
 }
 main .main__works {
   width: 100%;
+  position: relative;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .main__works {
+    overflow: hidden;
+  }
 }
 main .main__works .works_slider_wrapper {
   width: 100%;
@@ -919,12 +925,16 @@ main .main__works .works_slider_wrapper {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+@media (min-width: 960px) and (min-width: 960px) {
+  main .main__works .works_slider_wrapper {
+    overflow-x: hidden;
+    margin-left: 160px;
+  }
+}
 main .main__works .works_slider_wrapper::-webkit-scrollbar {
   display: none;
 }
 main .main__works .works_slider_wrapper .works_slider {
-  top: 0;
-  left: 0;
   width: 640vw;
   margin: 40px 0 40px 40px;
   display: flex;
@@ -935,7 +945,7 @@ main .main__works .works_slider_wrapper .works_slider {
 @media (min-width: 960px) and (min-width: 960px) {
   main .main__works .works_slider_wrapper .works_slider {
     width: 250vw;
-    margin-left: 160px;
+    margin: 0;
   }
 }
 main .main__works .works_slider_wrapper .works_slider .works_items {
@@ -958,61 +968,6 @@ main .main__works .works_slider_wrapper .works_slider .works_items {
   main .main__works .works_slider_wrapper .works_slider .works_items {
     height: 80vh;
     margin: 40px 24px;
-  }
-}
-main .main__works .works_slider_wrapper .works_slider .works_items:nth-of-type(1) {
-  background-image: url(../img/mockup_corporate.jpg);
-}
-@media (min-width: 960px) and (min-width: 960px) {
-  main .main__works .works_slider_wrapper .works_slider .works_items:hover {
-    transform: scale(1.05);
-  }
-}
-main .main__works .works_slider_wrapper .works_slider .works_items:nth-of-type(2) {
-  background-image: url(../img/mockup_reproduction.jpg);
-}
-@media (min-width: 960px) and (min-width: 960px) {
-  main .main__works .works_slider_wrapper .works_slider .works_items:hover {
-    transform: scale(1.05);
-  }
-}
-main .main__works .works_slider_wrapper .works_slider .works_items:nth-of-type(3) {
-  background-image: url(../img/mockup_lp.jpg);
-}
-@media (min-width: 960px) and (min-width: 960px) {
-  main .main__works .works_slider_wrapper .works_slider .works_items:hover {
-    transform: scale(1.05);
-  }
-}
-main .main__works .works_slider_wrapper .works_slider .works_items:nth-of-type(4) {
-  background-image: url(../img/mockup_namecard01.jpg);
-}
-@media (min-width: 960px) and (min-width: 960px) {
-  main .main__works .works_slider_wrapper .works_slider .works_items:hover {
-    transform: scale(1.05);
-  }
-}
-main .main__works .works_slider_wrapper .works_slider .works_items:nth-of-type(5) {
-  background-image: url(../img/mockup_namecard02.jpg);
-}
-@media (min-width: 960px) and (min-width: 960px) {
-  main .main__works .works_slider_wrapper .works_slider .works_items:hover {
-    transform: scale(1.05);
-  }
-}
-main .main__works .works_slider_wrapper .works_slider .works_items:nth-of-type(6) {
-  background-image: url(../img/mockup_banner.jpg);
-}
-@media (min-width: 960px) and (min-width: 960px) {
-  main .main__works .works_slider_wrapper .works_slider .works_items:hover {
-    transform: scale(1.05);
-  }
-}
-main .main__works .works_slider_wrapper .works_slider .works_items:nth-of-type(7) {
-  background-image: url(../img/mockup_portfolio.jpg);
-}
-@media (min-width: 960px) and (min-width: 960px) {
-  main .main__works .works_slider_wrapper .works_slider .works_items:hover {
     transform: scale(1.05);
   }
 }
@@ -1049,6 +1004,27 @@ main .main__works .works_slider_wrapper .works_slider .works_items .works_item_i
 }
 main .main__works .works_slider_wrapper .works_slider .works_items .works_item_icon::before {
   transform: translate(-50%, -50%) rotate(90deg);
+}
+main .main__works .works_slider_wrapper .works_slider .image1 {
+  background-image: url(../img/mockup_corporate.jpg);
+}
+main .main__works .works_slider_wrapper .works_slider .image2 {
+  background-image: url(../img/mockup_reproduction.jpg);
+}
+main .main__works .works_slider_wrapper .works_slider .image3 {
+  background-image: url(../img/mockup_lp.jpg);
+}
+main .main__works .works_slider_wrapper .works_slider .image4 {
+  background-image: url(../img/mockup_namecard01.jpg);
+}
+main .main__works .works_slider_wrapper .works_slider .image5 {
+  background-image: url(../img/mockup_namecard02.jpg);
+}
+main .main__works .works_slider_wrapper .works_slider .image6 {
+  background-image: url(../img/mockup_banner.jpg);
+}
+main .main__works .works_slider_wrapper .works_slider .image7 {
+  background-image: url(../img/mockup_portfolio.jpg);
 }
 main .main__works .works_slider_wrapper .scroll-horizon {
   display: none;
@@ -1111,6 +1087,32 @@ main .main__works .works_slider_wrapper .scroll-horizon span::before {
   top: 50%;
   left: 100%;
   transform: translate(-50%, -50%);
+}
+main .main__works .arrow-next {
+  display: none;
+}
+@media (min-width: 960px) and (min-width: 960px) {
+  main .main__works .arrow-next {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 100%;
+  }
+  main .main__works .arrow-next::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 64px 0 0 24px;
+    top: 50%;
+    left: 50%;
+    border-left: #B7C0C3 solid 4px;
+    border-bottom: #B7C0C3 solid 4px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    cursor: pointer;
+  }
 }
 main .main__works .modal_contents {
   display: none;
@@ -1220,12 +1222,14 @@ main .main__works .modal_contents .modal_contents_wrap .contents_wrap .contents_
   }
 }
 @media (min-width: 960px) and (min-width: 960px) {
-  main .main__works .modal_contents .modal_contents_wrap .contents_wrap .contents_row_pc div:nth-child(1) {
+  main .main__works .modal_contents .modal_contents_wrap .contents_wrap .contents_row_pc > div:nth-child(1) {
+    width: 100%;
     order: 2;
   }
 }
 @media (min-width: 960px) and (min-width: 960px) {
-  main .main__works .modal_contents .modal_contents_wrap .contents_wrap .contents_row_pc div:nth-child(2) {
+  main .main__works .modal_contents .modal_contents_wrap .contents_wrap .contents_row_pc > div:nth-child(2) {
+    width: 100%;
     order: 1;
   }
 }

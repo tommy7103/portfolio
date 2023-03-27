@@ -84,24 +84,44 @@ mainVisualCircleAnime();
 })();
 (function(){
     var flag = false;
-    window.addEventListener("scroll",function(){
-        const scroll = window.scrollY;
-        const scrollBottom = window.innerHeight + scroll;
-        const content = document.getElementById("works_slider");
-        const contentPositionY = content.getBoundingClientRect().top + scroll - 200;
-        const contentBottom = content.clientHeight + contentPositionY;
-        const $scrollHorizon = document.getElementById("js-scroll");
-        if(contentBottom >= scroll && scroll >= contentPositionY){
-            if(!flag){
-                flag = true;
-                fadeIn($scrollHorizon, 300, 0, 1);
-                setTimeout(() => {
-                    fadeOut($scrollHorizon, 300, 1, 0);
-                }, 4000);
+    const windowWidth = window.innerWidth;
+    const windowSm = 960;
+    if (windowWidth <= windowSm) {
+        window.addEventListener("scroll",function(){
+            const scroll = window.scrollY;
+            const content = document.getElementById("works_slider");
+            const contentPositionY = content.getBoundingClientRect().top + scroll - 200;
+            const contentBottom = content.clientHeight + contentPositionY;
+            const $scrollHorizon = document.getElementById("js-scroll");
+            if(contentBottom >= scroll && scroll >= contentPositionY){
+                if(!flag){
+                    flag = true;
+                    fadeIn($scrollHorizon, 300, 0, 1);
+                    setTimeout(() => {
+                        fadeOut($scrollHorizon, 300, 1, 0);
+                    }, 4000);
+                }
+            }else{
+                flag = false;
+                fadeOut($scrollHorizon, 300, 1, 0);
+            }; 
+        });
+    }else{
+        const $sliderContainer = document.getElementById("js-works");
+        const $sliderItem = $sliderContainer.querySelector(".works_items");
+        const style = window.getComputedStyle($sliderItem);
+        const num = style.marginLeft.replace(/[^0-9]/g,"");
+        const $sliderItemWidth = $sliderItem.clientWidth + (num * 2);
+        const arrow = document.getElementById("js-arrow");
+        let $sliderFirst = $sliderContainer.firstElementChild;
+        const arrowAnime = $sliderContainer.animate([{marginLeft: - $sliderItemWidth + "px"}],{duration: 300, easing: "ease-in-out"});
+        arrow.addEventListener("click", function(){
+            arrowAnime.play();
+            arrowAnime.onfinish = () => {
+                $sliderContainer.style.marginLeft = 0;
+                $sliderContainer.appendChild($sliderFirst);
+                $sliderFirst = $sliderContainer.firstElementChild;
             }
-        }else{
-            flag = false;
-            fadeOut($scrollHorizon, 300, 1, 0);
-        }
-    });
+        })
+    };
 })();
